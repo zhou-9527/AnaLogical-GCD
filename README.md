@@ -111,8 +111,8 @@ bash Test.sh
 ```
 
 We provide released weight for both KB settings:
-- **All-sample Knowledge-Base** weights (Baidu Netdisk): [link](YOUR_ALL_SAMPLE_BAIDU_LINK)
-- **Proto-based Knowledge-Base** weights (Baidu Netdisk): [link](YOUR_PROTO_BASED_BAIDU_LINK)
+- **All-sample Knowledge-Base** weights (Baidu Netdisk): [link](https://pan.baidu.com/s/1AXkd5Bk-N44KXrtcLEt27g?pwd=bv77)
+- **Proto-based Knowledge-Base** weights (Baidu Netdisk): [link](https://pan.baidu.com/s/15QQIFQlIX2f_X6OgQ5avHQ?pwd=rvdf)
 
 
 ---
