@@ -1,0 +1,1259 @@
+2026-02-15 09:40:27.425 | INFO     | __main__:init_experiment:103 - Experiment saved to: LOGs/ALGCD209/All_Samples/herbarium_19-Acc(15.02.2026_|_27.420)
+2026-02-15 09:40:27.425 | INFO     | __main__:init_experiment:105 - ['ALGCD209']
+2026-02-15 09:40:27.425 | INFO     | __main__:init_experiment:106 - Namespace(al_loss_rate=0, base_model='vit_dino', batch_size=256, cluster_momentum=1, contrast_unlabel_only=False, crop_pct=0.875, cuda=True, dataset_name='herbarium_19', distance='euclidean', epochs=200, epochs_AL=5000, epochs_AL_pre=10, epochs_AL_pre_train=2000, eval_funcs=['v1', 'v2'], exp_root='LOGs/', gamma=0.1, gamma_AL=0.1, gpu_clustering=True, gpu_id=0, grad_from_block=10, image_size=224, interpolation=3, layers_AL=2, log_dir='LOGs/ALGCD209/All_Samples/herbarium_19-Acc(15.02.2026_|_27.420)', logger=<loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=10, sink='LOGs/ALGCD209/All_Samples/herbarium_19-Acc(15.02.2026_|_27.420)/log.txt')]>, lr=0.1, lr_AL=0.1, model_dir='LOGs/ALGCD209/All_Samples/herbarium_19-Acc(15.02.2026_|_27.420)/checkpoints', model_name='vit_dino', model_path='LOGs/ALGCD209/All_Samples/herbarium_19-Acc(15.02.2026_|_27.420)/checkpoints/model.pt', momentum=0.9, n_views=2, num_labeled_classes=341, num_unlabeled_classes=342, num_workers=4, prop_train_labels=0.5, prototype_extraction_interval=1, report=True, save_best_thresh=None, seed=1, step_AL=30, strategy='zero_one', sup_con_weight=0.35, temperature=1.0, test_eval_funcs=['v2'], train_classes=[113, 378, 303, 504, 301, 490, 75, 491, 470, 558, 14, 156, 181, 518, 569, 144, 230, 245, 330, 68, 193, 79, 142, 539, 315, 452, 527, 8, 497, 31, 616, 593, 204, 250, 613, 162, 85, 325, 453, 122, 76, 236, 380, 533, 489, 678, 242, 441, 542, 594, 200, 392, 50, 608, 408, 634, 243, 1, 403, 420, 165, 428, 235, 568, 157, 187, 327, 271, 37, 48, 660, 557, 210, 465, 332, 64, 52, 622, 633, 313, 478, 624, 595, 310, 175, 346, 513, 285, 252, 365, 18, 480, 316, 55, 49, 338, 476, 40, 103, 546, 524, 214, 451, 258, 17, 427, 339, 440, 455, 662, 534, 447, 249, 239, 10, 540, 636, 334, 402, 369, 45, 319, 267, 62, 665, 352, 140, 240, 196, 653, 127, 517, 21, 454, 506, 500, 77, 312, 202, 263, 395, 101, 261, 170, 435, 251, 231, 413, 279, 535, 675, 342, 278, 34, 481, 482, 386, 155, 505, 680, 654, 283, 468, 12, 161, 659, 443, 159, 317, 78, 92, 556, 66, 571, 299, 355, 627, 247, 625, 529, 610, 15, 233, 215, 6, 268, 71, 597, 294, 362, 651, 619, 188, 570, 266, 354, 90, 591, 682, 118, 521, 647, 503, 498, 293, 109, 477, 205, 318, 190, 306, 406, 360, 366, 222, 494, 499, 194, 635, 426, 467, 397, 351, 132, 173, 178, 631, 344, 172, 97, 425, 663, 519, 206, 573, 552, 96, 390, 589, 677, 361, 89, 333, 179, 104, 0, 46, 171, 331, 471, 229, 547, 358, 211, 272, 485, 107, 479, 462, 223, 436, 102, 108, 213, 401, 531, 246, 391, 415, 125, 385, 674, 337, 596, 224, 26, 458, 449, 3, 134, 186, 404, 590, 541, 618, 225, 586, 350, 433, 432, 493, 409, 422, 632, 516, 112, 456, 20, 65, 298, 126, 495, 649, 460, 575, 137, 585, 7, 681, 309, 609, 185, 592, 153, 54, 30, 612, 100, 496, 623, 650, 237, 56, 60, 412, 262, 439, 264, 375, 208, 389, 367, 167, 38, 363, 561, 300, 416, 501, 583, 163], train_report_interval=40, transform='imagenet', unbalanced=True, unlabeled_classes=[2, 4, 5, 9, 11, 13, 16, 19, 22, 23, 24, 25, 27, 28, 29, 32, 33, 35, 36, 39, 41, 42, 43, 44, 47, 51, 53, 57, 58, 59, 61, 63, 67, 69, 70, 72, 73, 74, 80, 81, 82, 83, 84, 86, 87, 88, 91, 93, 94, 95, 98, 99, 105, 106, 110, 111, 114, 115, 116, 117, 119, 120, 121, 123, 124, 128, 129, 130, 131, 133, 135, 136, 138, 139, 141, 143, 145, 146, 147, 148, 149, 150, 151, 152, 154, 158, 160, 164, 166, 168, 169, 174, 176, 177, 180, 182, 183, 184, 189, 191, 192, 195, 197, 198, 199, 201, 203, 207, 209, 212, 216, 217, 218, 219, 220, 221, 226, 227, 228, 232, 234, 238, 241, 244, 248, 253, 254, 255, 256, 257, 259, 260, 265, 269, 270, 273, 274, 275, 276, 277, 280, 281, 282, 284, 286, 287, 288, 289, 290, 291, 292, 295, 296, 297, 302, 304, 305, 307, 308, 311, 314, 320, 321, 322, 323, 324, 326, 328, 329, 335, 336, 340, 341, 343, 345, 347, 348, 349, 353, 356, 357, 359, 364, 368, 370, 371, 372, 373, 374, 376, 377, 379, 381, 382, 383, 384, 387, 388, 393, 394, 396, 398, 399, 400, 405, 407, 410, 411, 414, 417, 418, 419, 421, 423, 424, 429, 430, 431, 434, 437, 438, 442, 444, 445, 446, 448, 450, 457, 459, 461, 463, 464, 466, 469, 472, 473, 474, 475, 483, 484, 486, 487, 488, 492, 502, 507, 508, 509, 510, 511, 512, 514, 515, 520, 522, 523, 525, 526, 528, 530, 532, 536, 537, 538, 543, 544, 545, 548, 549, 550, 551, 553, 554, 555, 559, 560, 562, 563, 564, 565, 566, 567, 572, 574, 576, 577, 578, 579, 580, 581, 582, 584, 587, 588, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 611, 614, 615, 617, 620, 621, 626, 628, 629, 630, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 648, 652, 655, 656, 657, 658, 661, 664, 666, 667, 668, 669, 670, 671, 672, 673, 676, 679], unsupervised_smoothing=1, use_ssb_splits=True, vis_rate=0.5, warmup_model_dir=None, weight_decay=5e-05, weight_decay_AL=0.0001, writer=<torch.utils.tensorboard.writer.SummaryWriter object at 0x7f6e6388d280>)
+2026-02-15 09:40:27.425 | INFO     | __main__:<module>:1137 - Using evaluation function ['v2'] to print results
+2026-02-15 09:40:32.471 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhexia mariana var. purpurea Michx.
+2026-02-15 09:40:32.471 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ulmarioides Naudin
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Brachyotum lindenii Cogn.
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis purpurascens (Aubl.) Triana
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Centronia laurifolia D.Don
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia calycina Cogn.
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Lavoisiera imbricata DC.
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ampla Triana
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia chartacea Triana
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia affinis DC.
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Comolia veronicaefolia Benth.
+2026-02-15 09:40:32.472 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Bellucia spruceana (Benth. ex Triana) J.F.Macbr.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia schlechtendalii Cogn.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia novemnervia (DC.) Triana
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea succosa (Aubl.) DC.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea sawadae J.F.Macbr.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia rimachii Wurdack
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia marginata Triana
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia alata (Aubl.) DC.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina arborea (Gardner) Cogn.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monochaetum bonplandii (Kunth) Naudin
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea stellaris O.Berg ex Triana
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea trinervia L.
+2026-02-15 09:40:32.473 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina multiflora (Gardner) Cogn.
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia serrulata (DC.) Naudin
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia papillosa (Desr.) Naudin
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia floribunda (Bonpl.) DC.
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Macairea parvifolia Benth.
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa rotundifolia (Triana) Wurdack
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia cuatrecasii Gleason
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia blepharodes DC.
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ernestia glandulosa Gleason
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia setosa Triana
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia fasciculata Gardner
+2026-02-15 09:40:32.474 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia matthaei Naudin
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Comolia vernicosa (Benth.) Triana
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia heliotropoides Triana
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Brachyotum ledifolium (Desr.) Triana
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina bipenicillata (Naudin) Cogn.
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra melanodesma (Naudin) Cogn.
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia ciliata Pav. ex D.Don
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mecranium ovatum Cogn.
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia theaezans subsp. flavescens Cogn.
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a "Bellucia egensis (DC.) Penneys
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia trimera Wurdack
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra chaetodon (DC.) Cogn.
+2026-02-15 09:40:32.475 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina gardneriana (Triana) Cogn.
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Maieta guianensis Aubl.
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea guatemalensis Donn.Sm.
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Brachyotum rostratum (Naudin) Triana
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis indecora (Bonpl.) Triana
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia goniostigma Triana
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis circaeifolia (Bonpl.) Triana
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia pycnaster Tutin
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina cubense (A.Rich.) M.Gn++mez
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa coronata Benth.
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia heterophylla (Desr.) Gleason
+2026-02-15 09:40:32.476 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ibaguensis (Bonpl.) Triana
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mecranium integrifolium subsp. alainii Skean
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia quadrangularis (Sw.) Naudin
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a "Henriettea ovata (Cogn.) Penneys
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra granatensis Gleason
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monochaetum vulcanicum Cogn.
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra sericea DC.
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia spennerostachya Naudin
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia tetrandra (Sw.) D.Don
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia punctata (Desr.) D.Don ex DC.
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri exilis Gleason
+2026-02-15 09:40:32.477 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monochaetum deppeanum (Schltdl. & Cham.) Naudin
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis caulialata (Ruiz & Pav.) Triana
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Comolia microphylla Benth.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia inobsepta Wurdack
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia stelligera Cogn.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra grandifolia Cogn.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mecranium puberulum Cogn.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea repens Ruiz & Pav.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ciliata (Rich.) DC.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia involucrata DC.
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia squamulosa (Sm.) Triana
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a "Henriettea caudata (Gleason) Penneys
+2026-02-15 09:40:32.478 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Adelobotrys monticola Gleason
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia setosa (Triana) Gleason
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia barbinervis (Benth.) Triana
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Macrocentrum repens (Gleason) Wurdack
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra krugii (Cogn.) Judd & Skean
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia plukenetii Naudin
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania hexamera Sprague
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia polygama Cogn.
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Adelobotrys permixta Wurdack
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia tomentosa (Rich.) D.Don ex DC.
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina ciliaris (Vent.) Cogn.
+2026-02-15 09:40:32.479 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia melinonis Naudin
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia theaezans (Bonpl.) Cogn.
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina herbacea (DC.) Cogn.
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia tepuiensis Wurdack
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis ornata (Miq.) Gleason
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tetrazygia urbani Cogn.
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra longicoma Cogn.
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea martiusii (DC.) Naudin
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia egensis Cogn.
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia multispicata Naudin
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia boliviensis Cogn.
+2026-02-15 09:40:32.480 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia bracteolata (Bonpl.) DC.
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Microlicia benthamiana Triana ex Cogn.
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Graffenrieda harlingii Wurdack
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa spadiciflora Triana
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tetrazygia crotonifolia (Desr.) DC.
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia neomicrantha Judd & Skean
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhexia mariana L. var. mariana
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia burchellii Triana
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia obscura (Bonpl.) Naudin
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhexia nuttallii C.W.James
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia lasiopoda Benth.
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis annua (Mart. ex DC.) Triana
+2026-02-15 09:40:32.481 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia bullosa DC.
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia triplinervis Ruiz & Pav.
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea quadriflora Gleason
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea multiflora Naudin
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia biappendiculata (Naudin) L.Uribe
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Microlicia viminalis (Mart.) Triana
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri myrtifolia Spruce ex Triana
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Macrocentrum droseroides Triana
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia theizans (Bonpl.) Cogn.
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea gracilis Hemsl.
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia cinerascens Miq.
+2026-02-15 09:40:32.482 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea grandiflora Hemsl.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia pyramidalis (Desr.) DC.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia macrothyrsa Benth.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia multiplinervia Cogn.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra reversa (DC.) Cogn.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina barbigera (Naudin) Baill.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia montana (Sw.) D.Don ex DC.
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia donaeana Naudin
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania macrophylla (Benth.) Triana
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea tuberculosa (Donn.Sm.) L.O.Williams
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ternatifolia Triana
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Heterocentron subtriplinervium (Link & Otto) A.Braun & Bouchn++
+2026-02-15 09:40:32.483 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia striata (Vahl) Cogn.
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra solenifera Cogn.
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia asperrima Triana
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ossaea angustifolia (DC.) Triana
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina laxa (Desr.) Cogn.
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia benthamiana Triana
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri elliptica Mart.
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhynchanthera serrulata (Rich.) DC.
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Chaetolepis lindeniana (Naudin) Triana
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Adelobotrys adscendens (Sw.) Triana
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia melanotricha (Triana) Gleason
+2026-02-15 09:40:32.484 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia rufibarbis (Triana) Gamba & Almeda
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia prasina (Sw.) DC.
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia corallina Spring
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tetrazygia elaegnoides (Sw.) DC.
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monochaetum humboldtianum (Kunth & Bouchn++) Kunth
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia holosericea (L.) DC.
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea subconnata Berg
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia allardii Wurdack
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhynchanthera cordata DC.
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Arthrostemma parvifolium Cogn.
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia eugenioides Triana
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa subciliata (DC.) Triana
+2026-02-15 09:40:32.485 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Schwackaea cupheoides (Benth.) Cogn.
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia myriantha Benth.
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea quadrangularis Triana
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea henripittieri (Cogn.) Penneys & Almeda
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia thomasiana DC.
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia sclerophylla Triana
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lourteigiana Wurdack
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia virescens (Vahl) Triana
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lasseri Gleason
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lamprophylla Triana
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra micropetala (Naudin) Cogn.
+2026-02-15 09:40:32.486 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra crenata (Pav. ex D.Don) Cogn.
+2026-02-15 09:40:32.490 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia petropolitana Cogn.
+2026-02-15 09:40:32.490 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Brachyotum confertum (Bonpl.) Triana
+2026-02-15 09:40:32.490 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lepidota DC.
+2026-02-15 09:40:32.490 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia bubalina (D.Don) Naudin
+2026-02-15 09:40:32.490 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia laevigata (L.) D.Don
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia hyemalis A.St.-Hil. & Naudin
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ledifolia (DC.) Naudin
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Arthrostemma ciliatum Pav. ex D.Don
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ossaea quadrisulca (Naudin) Wurdack
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Centradenia inaequilateralis (Schltdl. & Cham.) G.Don
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monochaetum myrtoideum (Bonpl.) Naudin
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Comolia sertularia (DC.) Triana
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri myrtilloides (Sw.) Poir.
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Siphanthera paludosa (DC.) Cogn.
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa stephanotricha Naudin
+2026-02-15 09:40:32.491 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aureoides Cogn.
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Brachyotum naudinii Triana
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aspergillaris (Bonpl.) Naudin
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia umbellata (Mill.) L.O.Williams
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Graffenrieda gracilis (Triana) L.O.Williams
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea fascicularis (Sw.) M.Gn++mez
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia serialis DC.
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Aciotis acuminifolia (Mart. ex DC.) Triana
+2026-02-15 09:40:32.492 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia ciliata var. elata (Pittier) L.Uribe
+2026-02-15 09:40:32.494 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa bullifera Mart. & Schrank ex DC.
+2026-02-15 09:40:32.494 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia paniculata (DC.) Naudin
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Siphanthera cordata Pohl ex DC.
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tetrazygia discolor (L.) DC.
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Macairea pachyphylla Benth.
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina lindeniana Cogn.
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monochaetum meridense Naudin
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia laxivenula (Wurdack) Gamba & Almeda
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ossaea capillaris (Don) Cogn.
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tateanthus duidae Gleason
+2026-02-15 09:40:32.495 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra divaricata (Naudin) Cogn.
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra foveolata Cogn.
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhexia lutea Walter
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhynchanthera grandiflora (Aubl.) DC.
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Henriettea seemannii (Naudin) L.O.Williams
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aliquantula Wurdack
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Graffenrieda weddellii Naudin
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia versicolor Naudin
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia barbeyana Cogn.
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Pterolepis trichotoma (Rottb.) Cogn.
+2026-02-15 09:40:32.496 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra candelabrum (J.F.Macbr.) Wurdack
+2026-02-15 09:40:32.497 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra australis (Cham.) Cogn.
+2026-02-15 09:40:32.497 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Graffenrieda caryophyllea Triana
+2026-02-15 09:40:32.497 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea schlimii (Naudin) Triana
+2026-02-15 09:40:32.497 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina mollis (Bonpl.) Cogn.
+2026-02-15 09:40:32.497 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Pilocosta nana (Standl.) Almeda & Whiffin
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ramboi Brade
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ligustrina (Sm.) Triana
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina sellowiana (Cham.) Cogn.
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra hirtella Cogn.
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia stenobotrys (Rich.) Naudin
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia caudata (Bonpl.) DC.
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a "Pleiochiton blepharodes (DC.) Reginato
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Marcetia taxifolia (A.St.-Hil.) DC.
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea anomala Donn.Sm.
+2026-02-15 09:40:32.498 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Microlicia euphorbioides Mart.
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia dolichorrhyncha Naudin
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra rufescens (DC.) Cogn.
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia erythropogon DC.
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aggregata Gleason
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Noterophila limnobios (DC.) Mart.
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa formicaria Mart. ex DC.
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia duckei Cogn.
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia asclepiadea Triana
+2026-02-15 09:40:32.499 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania involucrata (Desv.) Naudin
+2026-02-15 09:40:32.502 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Comolia ovalifolia (DC.) Triana
+2026-02-15 09:40:32.502 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia micrantha Standl.
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia sanguinea (D.Don) Triana
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa aristata Benth.
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia approximata Gamba & Almeda
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Axinaea macrophylla (Naudin) Triana
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia ferruginea (Desr.) DC.
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Charianthus corymbosus (Rich.) Cogn.
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia radulaefolia (Benth.) Naudin
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Microlicia cordata (Spreng.) Cham.
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Purpurella grossa Triana
+2026-02-15 09:40:32.503 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Rhexia ventricosa Fernald & Griscom
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia pedicellata Cogn.
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa macrophysca Spruce ex Triana
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia subcompressa Urb.
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Opisthocentra clidemioides Hook.f.
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia monantha L.O.Williams
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia rubens (Sw.) Naudin
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia monteleagreana Cogn.
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lasiocalyx Cogn.
+2026-02-15 09:40:32.504 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia quinquenervia (Mill.) Gamba & Almeda
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia pyrifolia Naudin
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania sclerophylla (Naudin) Triana
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa caquetana Sprague
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia krugii Cogn.
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Graffenrieda cucullata (Triana) L.O.Williams
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aurea (D.Don) Naudin
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania speciosa (Bonpl.) Naudin
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Bucquetia glutinosa (L.f.) DC.
+2026-02-15 09:40:32.505 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia splendens (Sw.) Griseb.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Acanthella sprucei Hook.f.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aeruginosa Naudin
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri guianensis Aubl.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Monolena primuliflora Hook.f.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri francavillana Cogn.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Graffenrieda intermedia Triana
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia regelii Cogn.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina semidecandra Cogn.
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ossaea microphylla (Sw.) C.Wright
+2026-02-15 09:40:32.506 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia obliqua (Griseb.) Cogn.
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia chamissois Naudin
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia delicatula A.Rich.
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Brachyotum grisebachii Cogn.
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra regnellii (Triana) Cogn.
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia reitziana (Cogn. & Gleason) Gamba & Almeda
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia campestris (Benth.) Triana
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia budlejoides Triana
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia hyperprasina Naudin
+2026-02-15 09:40:32.507 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia baracoensis Urb.
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lonchophylla Naudin
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia longispicata Triana
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia selleana Urb. & Ekman
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia centrodesma Naudin
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia samanensis Urb.
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri collocarpa Ducke
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Triolena hirsuta (Benth.) Triana
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina fothergillae (DC.) Cogn.
+2026-02-15 09:40:32.508 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia pepericarpa DC.
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia smaragdina Naudin
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia icosandra (Sw. ex Wikstr.) Urb.
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Clidemia rubra (Aubl.) Mart.
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania phlomoides (Triana) Almeda
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia erioclada Triana
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ossaea amygdaloides (DC.) Triana
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia loreyoides Triana
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri apiranga Spruce ex Triana
+2026-02-15 09:40:32.509 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia corymbiformis Cogn.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia phanerostila Pilg.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Cambessedesia corymbosa Mart. & Schrank ex DC.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Pterolepis glomerata (Rottb.) Miq.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina paratropica (Griseb.) Cogn.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia glaberrima (Schltdl.) Naudin
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tibouchina lepidota (Bonpl.) Baill.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra rhamnifolia (Naudin) Cogn.
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Tococa oligantha Gleason
+2026-02-15 09:40:32.510 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra dichotoma (Pav. ex D.Don) Cogn.
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Blakea multiflora Don
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Macairea stylosa Triana
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Ossaea confertiflora (DC.) Triana
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Conostegia superba Naudin
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia tinifolia Naudin
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia cannabina Markgr.
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Pachyloma huberioides (Naudin) Triana
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia rufescens (Aubl.) DC.
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia spinulosa Naudin
+2026-02-15 09:40:32.511 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia dispar Benth.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia aplostachya (Bonpl.) DC.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia lehmannii Cogn.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Nepsera aquatica (Aubl.) Naudin
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Mouriri huberi Cogn.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia hondurensis Donn.Sm.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Axinaea merianiae (DC.) Triana
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia calvescens DC.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Bellucia mespiloides (Miq.) J.F.Macbr.
+2026-02-15 09:40:32.512 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia pubipetala Miq.
+2026-02-15 09:40:32.513 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra agrestis (Aubl.) Raddi
+2026-02-15 09:40:32.513 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia tonduzii Cogn.
+2026-02-15 09:40:32.513 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Miconia latifolia (D.Don) Naudin
+2026-02-15 09:40:32.513 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Meriania brachycera (Naudin) Humberto Mend. & Fern.Alonso
+2026-02-15 09:40:32.513 | INFO     | __main__:<module>:1183 - Use for AL_train:a photo of a Leandra aurea (Cham.) Cogn.
+2026-02-15 09:41:11.275 | INFO     | __main__:train_AL:815 - Analogical Learning stage:
+2026-02-15 09:42:23.464 | INFO     | __main__:train_AL:864 - AL training, epo 0, num_Labeled 256, num_Unlabeled 17482 lrc=0.1000, ,COS loss=1.3796777, DR loss=0.1160978,total loss=1.3796777
+2026-02-15 09:48:22.667 | INFO     | __main__:train_AL:864 - AL training, epo 100, num_Labeled 256, num_Unlabeled 17482 lrc=0.0999, ,COS loss=0.6238380, DR loss=0.0345165,total loss=0.6238380
+2026-02-15 09:49:36.678 | INFO     | __main__:train_AL:864 - AL training, epo 200, num_Labeled 256, num_Unlabeled 17482 lrc=0.0996, ,COS loss=1.3497624, DR loss=0.1087980,total loss=1.3497624
+2026-02-15 09:50:50.052 | INFO     | __main__:train_AL:864 - AL training, epo 300, num_Labeled 256, num_Unlabeled 17482 lrc=0.0991, ,COS loss=1.3508080, DR loss=0.1088182,total loss=1.3508080
+2026-02-15 09:52:04.052 | INFO     | __main__:train_AL:864 - AL training, epo 400, num_Labeled 256, num_Unlabeled 17482 lrc=0.0984, ,COS loss=1.3508426, DR loss=0.1087804,total loss=1.3508426
+2026-02-15 09:53:21.094 | INFO     | __main__:train_AL:864 - AL training, epo 500, num_Labeled 256, num_Unlabeled 17482 lrc=0.0976, ,COS loss=1.3490982, DR loss=0.1086748,total loss=1.3490982
+2026-02-15 09:54:34.161 | INFO     | __main__:train_AL:864 - AL training, epo 600, num_Labeled 256, num_Unlabeled 17482 lrc=0.0965, ,COS loss=1.4352615, DR loss=0.1437243,total loss=1.4352615
+2026-02-15 09:55:46.860 | INFO     | __main__:train_AL:864 - AL training, epo 700, num_Labeled 256, num_Unlabeled 17482 lrc=0.0953, ,COS loss=1.3515806, DR loss=0.1089776,total loss=1.3515806
+2026-02-15 09:56:58.637 | INFO     | __main__:train_AL:864 - AL training, epo 800, num_Labeled 256, num_Unlabeled 17482 lrc=0.0939, ,COS loss=1.3516093, DR loss=0.1090356,total loss=1.3516093
+2026-02-15 09:58:19.118 | INFO     | __main__:train_AL:864 - AL training, epo 900, num_Labeled 256, num_Unlabeled 17482 lrc=0.0923, ,COS loss=1.3504539, DR loss=0.1087701,total loss=1.3504539
+2026-02-15 09:59:39.537 | INFO     | __main__:train_AL:864 - AL training, epo 1000, num_Labeled 256, num_Unlabeled 17482 lrc=0.0905, ,COS loss=1.3513668, DR loss=0.1089353,total loss=1.3513668
+2026-02-15 10:00:52.572 | INFO     | __main__:train_AL:864 - AL training, epo 1100, num_Labeled 256, num_Unlabeled 17482 lrc=0.0886, ,COS loss=1.3502846, DR loss=0.1088756,total loss=1.3502846
+2026-02-15 10:02:06.634 | INFO     | __main__:train_AL:864 - AL training, epo 1200, num_Labeled 256, num_Unlabeled 17482 lrc=0.0866, ,COS loss=1.3493000, DR loss=0.1086686,total loss=1.3493000
+2026-02-15 10:03:20.599 | INFO     | __main__:train_AL:864 - AL training, epo 1300, num_Labeled 256, num_Unlabeled 17482 lrc=0.0844, ,COS loss=1.3505149, DR loss=0.1090360,total loss=1.3505149
+2026-02-15 10:04:35.195 | INFO     | __main__:train_AL:864 - AL training, epo 1400, num_Labeled 256, num_Unlabeled 17482 lrc=0.0821, ,COS loss=1.3506800, DR loss=0.1089972,total loss=1.3506800
+2026-02-15 10:05:49.503 | INFO     | __main__:train_AL:864 - AL training, epo 1500, num_Labeled 256, num_Unlabeled 17482 lrc=0.0796, ,COS loss=1.3482492, DR loss=0.1084938,total loss=1.3482492
+2026-02-15 10:07:04.146 | INFO     | __main__:train_AL:864 - AL training, epo 1600, num_Labeled 256, num_Unlabeled 17482 lrc=0.0770, ,COS loss=1.3512112, DR loss=0.1091894,total loss=1.3512112
+2026-02-15 10:08:18.581 | INFO     | __main__:train_AL:864 - AL training, epo 1700, num_Labeled 256, num_Unlabeled 17482 lrc=0.0743, ,COS loss=1.3503265, DR loss=0.1090387,total loss=1.3503265
+2026-02-15 10:09:32.582 | INFO     | __main__:train_AL:864 - AL training, epo 1800, num_Labeled 256, num_Unlabeled 17482 lrc=0.0716, ,COS loss=1.3492408, DR loss=0.1086521,total loss=1.3492408
+2026-02-15 10:10:47.646 | INFO     | __main__:train_AL:864 - AL training, epo 1900, num_Labeled 256, num_Unlabeled 17482 lrc=0.0687, ,COS loss=1.3515729, DR loss=0.1089299,total loss=1.3515729
+2026-02-15 10:12:00.983 | INFO     | __main__:train_AL:864 - AL training, epo 2000, num_Labeled 256, num_Unlabeled 17482 lrc=0.0658, ,COS loss=1.3490038, DR loss=0.1087939,total loss=1.3490038
+2026-02-15 10:13:16.006 | INFO     | __main__:train_AL:864 - AL training, epo 2100, num_Labeled 256, num_Unlabeled 17482 lrc=0.0628, ,COS loss=1.3515890, DR loss=0.1089237,total loss=1.3515890
+2026-02-15 10:14:34.114 | INFO     | __main__:train_AL:864 - AL training, epo 2200, num_Labeled 256, num_Unlabeled 17482 lrc=0.0598, ,COS loss=1.3508141, DR loss=0.1089165,total loss=1.3508141
+2026-02-15 10:15:49.487 | INFO     | __main__:train_AL:864 - AL training, epo 2300, num_Labeled 256, num_Unlabeled 17482 lrc=0.0567, ,COS loss=1.3512361, DR loss=0.1087803,total loss=1.3512361
+2026-02-15 10:17:03.904 | INFO     | __main__:train_AL:864 - AL training, epo 2400, num_Labeled 256, num_Unlabeled 17482 lrc=0.0536, ,COS loss=1.3522966, DR loss=0.1090765,total loss=1.3522966
+2026-02-15 10:18:17.606 | INFO     | __main__:train_AL:864 - AL training, epo 2500, num_Labeled 256, num_Unlabeled 17482 lrc=0.0505, ,COS loss=1.3507841, DR loss=0.1088554,total loss=1.3507841
+2026-02-15 10:19:31.660 | INFO     | __main__:train_AL:864 - AL training, epo 2600, num_Labeled 256, num_Unlabeled 17482 lrc=0.0474, ,COS loss=1.3502493, DR loss=0.1088682,total loss=1.3502493
+2026-02-15 10:20:44.642 | INFO     | __main__:train_AL:864 - AL training, epo 2700, num_Labeled 256, num_Unlabeled 17482 lrc=0.0443, ,COS loss=1.3536899, DR loss=0.1085688,total loss=1.3536899
+2026-02-15 10:21:58.634 | INFO     | __main__:train_AL:864 - AL training, epo 2800, num_Labeled 256, num_Unlabeled 17482 lrc=0.0412, ,COS loss=1.3507369, DR loss=0.1086974,total loss=1.3507369
+2026-02-15 10:23:11.846 | INFO     | __main__:train_AL:864 - AL training, epo 2900, num_Labeled 256, num_Unlabeled 17482 lrc=0.0382, ,COS loss=1.3494070, DR loss=0.1090784,total loss=1.3494070
+2026-02-15 10:24:26.626 | INFO     | __main__:train_AL:864 - AL training, epo 3000, num_Labeled 256, num_Unlabeled 17482 lrc=0.0352, ,COS loss=1.3495213, DR loss=0.1086658,total loss=1.3495213
+2026-02-15 10:25:43.742 | INFO     | __main__:train_AL:864 - AL training, epo 3100, num_Labeled 256, num_Unlabeled 17482 lrc=0.0323, ,COS loss=1.3511274, DR loss=0.1091279,total loss=1.3511274
+2026-02-15 10:26:58.930 | INFO     | __main__:train_AL:864 - AL training, epo 3200, num_Labeled 256, num_Unlabeled 17482 lrc=0.0294, ,COS loss=1.3523412, DR loss=0.1090346,total loss=1.3523412
+2026-02-15 10:28:15.778 | INFO     | __main__:train_AL:864 - AL training, epo 3300, num_Labeled 256, num_Unlabeled 17482 lrc=0.0267, ,COS loss=1.3496965, DR loss=0.1087886,total loss=1.3496965
+2026-02-15 10:29:29.914 | INFO     | __main__:train_AL:864 - AL training, epo 3400, num_Labeled 256, num_Unlabeled 17482 lrc=0.0240, ,COS loss=1.3508270, DR loss=0.1088124,total loss=1.3508270
+2026-02-15 10:30:44.258 | INFO     | __main__:train_AL:864 - AL training, epo 3500, num_Labeled 256, num_Unlabeled 17482 lrc=0.0214, ,COS loss=1.3510824, DR loss=0.1089574,total loss=1.3510824
+2026-02-15 10:31:58.035 | INFO     | __main__:train_AL:864 - AL training, epo 3600, num_Labeled 256, num_Unlabeled 17482 lrc=0.0189, ,COS loss=1.3506303, DR loss=0.1088314,total loss=1.3506303
+2026-02-15 10:33:12.415 | INFO     | __main__:train_AL:864 - AL training, epo 3700, num_Labeled 256, num_Unlabeled 17482 lrc=0.0166, ,COS loss=1.3489566, DR loss=0.1085072,total loss=1.3489566
+2026-02-15 10:34:28.027 | INFO     | __main__:train_AL:864 - AL training, epo 3800, num_Labeled 256, num_Unlabeled 17482 lrc=0.0144, ,COS loss=1.3513237, DR loss=0.1089492,total loss=1.3513237
+2026-02-15 10:35:41.044 | INFO     | __main__:train_AL:864 - AL training, epo 3900, num_Labeled 256, num_Unlabeled 17482 lrc=0.0124, ,COS loss=1.3511560, DR loss=0.1090598,total loss=1.3511560
+2026-02-15 10:36:53.971 | INFO     | __main__:train_AL:864 - AL training, epo 4000, num_Labeled 256, num_Unlabeled 17482 lrc=0.0105, ,COS loss=1.3501010, DR loss=0.1089334,total loss=1.3501010
+2026-02-15 10:38:06.882 | INFO     | __main__:train_AL:864 - AL training, epo 4100, num_Labeled 256, num_Unlabeled 17482 lrc=0.0087, ,COS loss=1.3501793, DR loss=0.1088212,total loss=1.3501793
+2026-02-15 10:39:27.187 | INFO     | __main__:train_AL:864 - AL training, epo 4200, num_Labeled 256, num_Unlabeled 17482 lrc=0.0071, ,COS loss=1.3491333, DR loss=0.1086395,total loss=1.3491333
+2026-02-15 10:40:40.972 | INFO     | __main__:train_AL:864 - AL training, epo 4300, num_Labeled 256, num_Unlabeled 17482 lrc=0.0057, ,COS loss=1.3479795, DR loss=0.1084998,total loss=1.3479795
+2026-02-15 10:41:54.069 | INFO     | __main__:train_AL:864 - AL training, epo 4400, num_Labeled 256, num_Unlabeled 17482 lrc=0.0045, ,COS loss=1.3526037, DR loss=0.1091526,total loss=1.3526037
+2026-02-15 10:43:15.654 | INFO     | __main__:train_AL:864 - AL training, epo 4500, num_Labeled 256, num_Unlabeled 17482 lrc=0.0034, ,COS loss=1.3494084, DR loss=0.1085901,total loss=1.3494084
+2026-02-15 10:44:42.428 | INFO     | __main__:train_AL:864 - AL training, epo 4600, num_Labeled 256, num_Unlabeled 17482 lrc=0.0026, ,COS loss=1.3521695, DR loss=0.1090040,total loss=1.3521695
+2026-02-15 10:45:55.467 | INFO     | __main__:train_AL:864 - AL training, epo 4700, num_Labeled 256, num_Unlabeled 17482 lrc=0.0019, ,COS loss=1.3510263, DR loss=0.1088020,total loss=1.3510263
+2026-02-15 10:47:08.565 | INFO     | __main__:train_AL:864 - AL training, epo 4800, num_Labeled 256, num_Unlabeled 17482 lrc=0.0014, ,COS loss=1.3497832, DR loss=0.1088076,total loss=1.3497832
+2026-02-15 10:48:22.055 | INFO     | __main__:train_AL:864 - AL training, epo 4900, num_Labeled 256, num_Unlabeled 17482 lrc=0.0011, ,COS loss=1.3517501, DR loss=0.1089977,total loss=1.3517501
+2026-02-15 10:54:37.973 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.1003 | Old 0.1231 | New 0.0881 | Eval_funcs: ['v1', 'v2']
+2026-02-15 11:01:30.004 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2']
+2026-02-15 11:02:28.958 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:02:29.736 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 11:02:29.736 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:06:38.550 | INFO     | __main__:train:595 - Epoch: 0 Avg Loss: 5.243 | Constrastive: 5.243 
+2026-02-15 11:11:47.692 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.2275 | Old 0.3052 | New 0.1857 | Eval_funcs: ['v1', 'v2']
+2026-02-15 11:12:07.259 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 11:12:07.260 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:16:21.418 | INFO     | __main__:train:595 - Epoch: 1 Avg Loss: 5.105 | Constrastive: 5.105 
+2026-02-15 11:21:33.634 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.2683 | Old 0.3532 | New 0.2226 | Eval_funcs: ['v1', 'v2']
+2026-02-15 11:21:53.306 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 11:21:53.307 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:26:07.557 | INFO     | __main__:train:595 - Epoch: 2 Avg Loss: 5.047 | Constrastive: 5.047 
+2026-02-15 11:31:15.003 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.2795 | Old 0.3821 | New 0.2243 | Eval_funcs: ['v1', 'v2']
+2026-02-15 11:31:34.514 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 11:31:34.515 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:35:55.349 | INFO     | __main__:train:595 - Epoch: 3 Avg Loss: 5.028 | Constrastive: 5.028 
+2026-02-15 11:41:06.389 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.2912 | Old 0.4142 | New 0.2250 | Eval_funcs: ['v1', 'v2']
+2026-02-15 11:41:25.865 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 11:41:25.866 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:45:37.439 | INFO     | __main__:train:595 - Epoch: 4 Avg Loss: 5.005 | Constrastive: 5.005 
+2026-02-15 11:50:46.822 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3013 | Old 0.4203 | New 0.2374 | Eval_funcs: ['v1', 'v2']
+2026-02-15 11:51:05.840 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 11:51:05.842 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 11:55:15.987 | INFO     | __main__:train:595 - Epoch: 5 Avg Loss: 4.989 | Constrastive: 4.989 
+2026-02-15 12:00:23.440 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3167 | Old 0.4524 | New 0.2437 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:00:42.495 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:00:42.496 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 12:04:54.984 | INFO     | __main__:train:595 - Epoch: 6 Avg Loss: 4.961 | Constrastive: 4.961 
+2026-02-15 12:10:07.416 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3242 | Old 0.4669 | New 0.2474 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:10:27.114 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:10:27.115 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 12:14:39.300 | INFO     | __main__:train:595 - Epoch: 7 Avg Loss: 4.950 | Constrastive: 4.950 
+2026-02-15 12:19:51.553 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3234 | Old 0.4731 | New 0.2429 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:20:10.380 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:20:10.380 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 12:24:22.412 | INFO     | __main__:train:595 - Epoch: 8 Avg Loss: 4.944 | Constrastive: 4.944 
+2026-02-15 12:29:31.105 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3278 | Old 0.4799 | New 0.2460 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:29:49.728 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:29:49.729 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 12:33:59.780 | INFO     | __main__:train:595 - Epoch: 9 Avg Loss: 4.925 | Constrastive: 4.925 
+2026-02-15 12:39:06.944 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3503 | Old 0.5005 | New 0.2694 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:39:25.876 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:39:25.877 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 12:43:36.285 | INFO     | __main__:train:595 - Epoch: 10 Avg Loss: 4.916 | Constrastive: 4.916 
+2026-02-15 12:48:43.651 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3514 | Old 0.5109 | New 0.2656 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:49:01.764 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:49:01.765 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 12:53:20.612 | INFO     | __main__:train:595 - Epoch: 11 Avg Loss: 4.897 | Constrastive: 4.897 
+2026-02-15 12:58:32.744 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3503 | Old 0.5175 | New 0.2603 | Eval_funcs: ['v1', 'v2']
+2026-02-15 12:58:51.036 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 12:58:51.037 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 13:03:02.529 | INFO     | __main__:train:595 - Epoch: 12 Avg Loss: 4.883 | Constrastive: 4.883 
+2026-02-15 13:08:09.606 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3606 | Old 0.5362 | New 0.2661 | Eval_funcs: ['v1', 'v2']
+2026-02-15 13:08:27.979 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 13:08:27.980 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 13:12:40.401 | INFO     | __main__:train:595 - Epoch: 13 Avg Loss: 4.879 | Constrastive: 4.879 
+2026-02-15 13:17:47.703 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3557 | Old 0.5382 | New 0.2575 | Eval_funcs: ['v1', 'v2']
+2026-02-15 13:18:05.810 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 13:18:05.811 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 13:22:22.255 | INFO     | __main__:train:595 - Epoch: 14 Avg Loss: 4.869 | Constrastive: 4.869 
+2026-02-15 13:27:31.563 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3667 | Old 0.5497 | New 0.2682 | Eval_funcs: ['v1', 'v2']
+2026-02-15 13:27:49.711 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 13:27:49.711 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 13:32:17.352 | INFO     | __main__:train:595 - Epoch: 15 Avg Loss: 4.866 | Constrastive: 4.866 
+2026-02-15 13:37:32.272 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3770 | Old 0.5613 | New 0.2778 | Eval_funcs: ['v1', 'v2']
+2026-02-15 13:37:49.771 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 13:37:49.772 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 13:42:06.422 | INFO     | __main__:train:595 - Epoch: 16 Avg Loss: 4.856 | Constrastive: 4.856 
+2026-02-15 13:47:17.755 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3794 | Old 0.5743 | New 0.2745 | Eval_funcs: ['v1', 'v2']
+2026-02-15 13:47:35.543 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 13:47:35.544 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 13:51:49.645 | INFO     | __main__:train:595 - Epoch: 17 Avg Loss: 4.842 | Constrastive: 4.842 
+2026-02-15 13:57:01.630 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3883 | Old 0.5617 | New 0.2950 | Eval_funcs: ['v1', 'v2']
+2026-02-15 13:57:20.070 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 13:57:20.070 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:01:32.692 | INFO     | __main__:train:595 - Epoch: 18 Avg Loss: 4.835 | Constrastive: 4.835 
+2026-02-15 14:06:45.279 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3882 | Old 0.5694 | New 0.2907 | Eval_funcs: ['v1', 'v2']
+2026-02-15 14:07:02.918 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 14:07:02.919 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:11:16.079 | INFO     | __main__:train:595 - Epoch: 19 Avg Loss: 4.828 | Constrastive: 4.828 
+2026-02-15 14:16:27.238 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3875 | Old 0.5756 | New 0.2863 | Eval_funcs: ['v1', 'v2']
+2026-02-15 14:16:45.109 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 14:16:45.110 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:21:03.911 | INFO     | __main__:train:595 - Epoch: 20 Avg Loss: 4.820 | Constrastive: 4.820 
+2026-02-15 14:26:15.092 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3896 | Old 0.5886 | New 0.2825 | Eval_funcs: ['v1', 'v2']
+2026-02-15 14:26:32.934 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 14:26:32.935 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:30:54.576 | INFO     | __main__:train:595 - Epoch: 21 Avg Loss: 4.812 | Constrastive: 4.812 
+2026-02-15 14:36:04.504 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3918 | Old 0.5791 | New 0.2910 | Eval_funcs: ['v1', 'v2']
+2026-02-15 14:36:22.761 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 14:36:22.762 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:40:34.194 | INFO     | __main__:train:595 - Epoch: 22 Avg Loss: 4.806 | Constrastive: 4.806 
+2026-02-15 14:45:42.388 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4006 | Old 0.5828 | New 0.3026 | Eval_funcs: ['v1', 'v2']
+2026-02-15 14:46:00.646 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 14:46:00.647 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:50:13.309 | INFO     | __main__:train:595 - Epoch: 23 Avg Loss: 4.802 | Constrastive: 4.802 
+2026-02-15 14:55:19.449 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.3976 | Old 0.5997 | New 0.2889 | Eval_funcs: ['v1', 'v2']
+2026-02-15 14:55:37.433 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 14:55:37.433 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 14:59:53.491 | INFO     | __main__:train:595 - Epoch: 24 Avg Loss: 4.797 | Constrastive: 4.797 
+2026-02-15 15:05:05.471 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4045 | Old 0.5977 | New 0.3005 | Eval_funcs: ['v1', 'v2']
+2026-02-15 15:05:23.474 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 15:05:23.474 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 15:09:38.396 | INFO     | __main__:train:595 - Epoch: 25 Avg Loss: 4.788 | Constrastive: 4.788 
+2026-02-15 15:14:48.039 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4066 | Old 0.6057 | New 0.2995 | Eval_funcs: ['v1', 'v2']
+2026-02-15 15:15:05.867 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 15:15:05.867 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 15:19:29.937 | INFO     | __main__:train:595 - Epoch: 26 Avg Loss: 4.785 | Constrastive: 4.785 
+2026-02-15 15:24:38.437 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4113 | Old 0.6143 | New 0.3020 | Eval_funcs: ['v1', 'v2']
+2026-02-15 15:24:56.647 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 15:24:56.647 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 15:29:17.511 | INFO     | __main__:train:595 - Epoch: 27 Avg Loss: 4.785 | Constrastive: 4.785 
+2026-02-15 15:34:27.111 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4112 | Old 0.6099 | New 0.3043 | Eval_funcs: ['v1', 'v2']
+2026-02-15 15:34:44.789 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 15:34:44.790 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 15:38:57.832 | INFO     | __main__:train:595 - Epoch: 28 Avg Loss: 4.771 | Constrastive: 4.771 
+2026-02-15 15:44:07.987 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4276 | Old 0.6240 | New 0.3218 | Eval_funcs: ['v1', 'v2']
+2026-02-15 15:44:26.384 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 15:44:26.385 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 15:48:39.349 | INFO     | __main__:train:595 - Epoch: 29 Avg Loss: 4.772 | Constrastive: 4.772 
+2026-02-15 15:53:50.496 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4166 | Old 0.6158 | New 0.3094 | Eval_funcs: ['v1', 'v2']
+2026-02-15 15:54:08.437 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 15:54:08.438 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 15:58:22.854 | INFO     | __main__:train:595 - Epoch: 30 Avg Loss: 4.763 | Constrastive: 4.763 
+2026-02-15 16:03:33.761 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4283 | Old 0.6233 | New 0.3233 | Eval_funcs: ['v1', 'v2']
+2026-02-15 16:03:51.708 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 16:03:51.710 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 16:08:11.008 | INFO     | __main__:train:595 - Epoch: 31 Avg Loss: 4.762 | Constrastive: 4.762 
+2026-02-15 16:13:24.251 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4246 | Old 0.6240 | New 0.3172 | Eval_funcs: ['v1', 'v2']
+2026-02-15 16:13:43.460 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 16:13:43.461 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 16:18:01.442 | INFO     | __main__:train:595 - Epoch: 32 Avg Loss: 4.757 | Constrastive: 4.757 
+2026-02-15 16:23:11.820 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4315 | Old 0.6257 | New 0.3271 | Eval_funcs: ['v1', 'v2']
+2026-02-15 16:23:30.286 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 16:23:30.287 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 16:27:48.263 | INFO     | __main__:train:595 - Epoch: 33 Avg Loss: 4.753 | Constrastive: 4.753 
+2026-02-15 16:33:03.425 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4218 | Old 0.6263 | New 0.3118 | Eval_funcs: ['v1', 'v2']
+2026-02-15 16:33:21.625 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 16:33:21.626 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 16:37:39.943 | INFO     | __main__:train:595 - Epoch: 34 Avg Loss: 4.757 | Constrastive: 4.757 
+2026-02-15 16:42:52.340 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4267 | Old 0.6303 | New 0.3171 | Eval_funcs: ['v1', 'v2']
+2026-02-15 16:43:11.233 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 16:43:11.234 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 16:47:39.781 | INFO     | __main__:train:595 - Epoch: 35 Avg Loss: 4.747 | Constrastive: 4.747 
+2026-02-15 16:52:51.159 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4404 | Old 0.6310 | New 0.3379 | Eval_funcs: ['v1', 'v2']
+2026-02-15 16:53:09.543 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 16:53:09.544 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 16:57:32.565 | INFO     | __main__:train:595 - Epoch: 36 Avg Loss: 4.738 | Constrastive: 4.738 
+2026-02-15 17:02:44.616 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4284 | Old 0.6407 | New 0.3141 | Eval_funcs: ['v1', 'v2']
+2026-02-15 17:03:02.092 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 17:03:02.093 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 17:07:21.609 | INFO     | __main__:train:595 - Epoch: 37 Avg Loss: 4.739 | Constrastive: 4.739 
+2026-02-15 17:12:32.566 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4302 | Old 0.6380 | New 0.3183 | Eval_funcs: ['v1', 'v2']
+2026-02-15 17:12:50.831 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 17:12:50.831 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 17:17:13.874 | INFO     | __main__:train:595 - Epoch: 38 Avg Loss: 4.737 | Constrastive: 4.737 
+2026-02-15 17:22:29.719 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4334 | Old 0.6302 | New 0.3276 | Eval_funcs: ['v1', 'v2']
+2026-02-15 17:22:49.037 | INFO     | __main__:train:459 - Best Report          Epoch:0 Test Accuracies: All 0.0950 | Old 0.1002 | New 0.0923 | Eval_funcs: ['v2'] 
+2026-02-15 17:22:49.038 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:0 Test Accuracies: All 0.1090 | Old 0.1406 | New 0.0920 | Eval_funcs: ['v2']
+2026-02-15 17:27:06.389 | INFO     | __main__:train:595 - Epoch: 39 Avg Loss: 4.733 | Constrastive: 4.733 
+2026-02-15 17:32:14.031 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4345 | Old 0.6291 | New 0.3298 | Eval_funcs: ['v1', 'v2']
+2026-02-15 17:39:01.965 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2']
+2026-02-15 17:39:59.762 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 17:40:03.538 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 17:40:03.539 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 17:44:19.866 | INFO     | __main__:train:595 - Epoch: 40 Avg Loss: 4.732 | Constrastive: 4.732 
+2026-02-15 17:49:26.963 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4413 | Old 0.6400 | New 0.3343 | Eval_funcs: ['v1', 'v2']
+2026-02-15 17:49:45.301 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 17:49:45.302 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 17:54:02.412 | INFO     | __main__:train:595 - Epoch: 41 Avg Loss: 4.726 | Constrastive: 4.726 
+2026-02-15 17:59:15.960 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4420 | Old 0.6490 | New 0.3306 | Eval_funcs: ['v1', 'v2']
+2026-02-15 17:59:33.970 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 17:59:33.970 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 18:03:51.307 | INFO     | __main__:train:595 - Epoch: 42 Avg Loss: 4.726 | Constrastive: 4.726 
+2026-02-15 18:08:59.082 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4465 | Old 0.6469 | New 0.3387 | Eval_funcs: ['v1', 'v2']
+2026-02-15 18:09:17.262 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 18:09:17.263 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 18:13:31.144 | INFO     | __main__:train:595 - Epoch: 43 Avg Loss: 4.722 | Constrastive: 4.722 
+2026-02-15 18:18:47.181 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4475 | Old 0.6386 | New 0.3447 | Eval_funcs: ['v1', 'v2']
+2026-02-15 18:19:05.189 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 18:19:05.190 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 18:23:22.537 | INFO     | __main__:train:595 - Epoch: 44 Avg Loss: 4.723 | Constrastive: 4.723 
+2026-02-15 18:28:33.428 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4485 | Old 0.6474 | New 0.3416 | Eval_funcs: ['v1', 'v2']
+2026-02-15 18:28:51.780 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 18:28:51.781 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 18:33:05.204 | INFO     | __main__:train:595 - Epoch: 45 Avg Loss: 4.716 | Constrastive: 4.716 
+2026-02-15 18:38:16.408 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4475 | Old 0.6477 | New 0.3397 | Eval_funcs: ['v1', 'v2']
+2026-02-15 18:38:34.677 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 18:38:34.678 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 18:42:50.087 | INFO     | __main__:train:595 - Epoch: 46 Avg Loss: 4.722 | Constrastive: 4.722 
+2026-02-15 18:48:00.688 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4482 | Old 0.6492 | New 0.3400 | Eval_funcs: ['v1', 'v2']
+2026-02-15 18:48:18.561 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 18:48:18.561 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 18:52:31.936 | INFO     | __main__:train:595 - Epoch: 47 Avg Loss: 4.711 | Constrastive: 4.711 
+2026-02-15 18:57:41.879 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4517 | Old 0.6440 | New 0.3482 | Eval_funcs: ['v1', 'v2']
+2026-02-15 18:58:00.218 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 18:58:00.219 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 19:02:15.298 | INFO     | __main__:train:595 - Epoch: 48 Avg Loss: 4.712 | Constrastive: 4.712 
+2026-02-15 19:07:25.016 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4461 | Old 0.6428 | New 0.3402 | Eval_funcs: ['v1', 'v2']
+2026-02-15 19:07:42.798 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 19:07:42.799 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 19:11:55.060 | INFO     | __main__:train:595 - Epoch: 49 Avg Loss: 4.717 | Constrastive: 4.717 
+2026-02-15 19:17:00.706 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4491 | Old 0.6521 | New 0.3399 | Eval_funcs: ['v1', 'v2']
+2026-02-15 19:17:19.005 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 19:17:19.005 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 19:21:33.066 | INFO     | __main__:train:595 - Epoch: 50 Avg Loss: 4.711 | Constrastive: 4.711 
+2026-02-15 19:26:40.181 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4537 | Old 0.6577 | New 0.3440 | Eval_funcs: ['v1', 'v2']
+2026-02-15 19:26:58.278 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 19:26:58.279 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 19:31:13.358 | INFO     | __main__:train:595 - Epoch: 51 Avg Loss: 4.702 | Constrastive: 4.702 
+2026-02-15 19:36:17.951 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4667 | Old 0.6641 | New 0.3605 | Eval_funcs: ['v1', 'v2']
+2026-02-15 19:36:35.884 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 19:36:35.885 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 19:40:48.896 | INFO     | __main__:train:595 - Epoch: 52 Avg Loss: 4.702 | Constrastive: 4.702 
+2026-02-15 19:46:01.164 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4596 | Old 0.6629 | New 0.3502 | Eval_funcs: ['v1', 'v2']
+2026-02-15 19:46:19.647 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 19:46:19.647 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 19:50:32.593 | INFO     | __main__:train:595 - Epoch: 53 Avg Loss: 4.705 | Constrastive: 4.705 
+2026-02-15 19:55:38.569 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4636 | Old 0.6675 | New 0.3539 | Eval_funcs: ['v1', 'v2']
+2026-02-15 19:55:57.137 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 19:55:57.138 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:00:20.277 | INFO     | __main__:train:595 - Epoch: 54 Avg Loss: 4.701 | Constrastive: 4.701 
+2026-02-15 20:05:35.370 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4684 | Old 0.6625 | New 0.3640 | Eval_funcs: ['v1', 'v2']
+2026-02-15 20:05:55.260 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 20:05:55.261 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:10:19.145 | INFO     | __main__:train:595 - Epoch: 55 Avg Loss: 4.697 | Constrastive: 4.697 
+2026-02-15 20:15:33.067 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4682 | Old 0.6505 | New 0.3701 | Eval_funcs: ['v1', 'v2']
+2026-02-15 20:15:54.079 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 20:15:54.080 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:20:15.093 | INFO     | __main__:train:595 - Epoch: 56 Avg Loss: 4.694 | Constrastive: 4.694 
+2026-02-15 20:25:33.312 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4699 | Old 0.6645 | New 0.3652 | Eval_funcs: ['v1', 'v2']
+2026-02-15 20:25:52.045 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 20:25:52.046 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:30:10.635 | INFO     | __main__:train:595 - Epoch: 57 Avg Loss: 4.690 | Constrastive: 4.690 
+2026-02-15 20:35:26.121 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4737 | Old 0.6649 | New 0.3707 | Eval_funcs: ['v1', 'v2']
+2026-02-15 20:35:46.523 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 20:35:46.524 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:40:04.588 | INFO     | __main__:train:595 - Epoch: 58 Avg Loss: 4.692 | Constrastive: 4.692 
+2026-02-15 20:45:19.995 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4802 | Old 0.6599 | New 0.3835 | Eval_funcs: ['v1', 'v2']
+2026-02-15 20:45:40.930 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 20:45:40.930 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:49:57.852 | INFO     | __main__:train:595 - Epoch: 59 Avg Loss: 4.688 | Constrastive: 4.688 
+2026-02-15 20:55:19.669 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4767 | Old 0.6656 | New 0.3750 | Eval_funcs: ['v1', 'v2']
+2026-02-15 20:55:40.080 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 20:55:40.081 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 20:59:58.824 | INFO     | __main__:train:595 - Epoch: 60 Avg Loss: 4.690 | Constrastive: 4.690 
+2026-02-15 21:05:16.475 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4757 | Old 0.6644 | New 0.3743 | Eval_funcs: ['v1', 'v2']
+2026-02-15 21:05:35.343 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 21:05:35.344 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 21:09:58.637 | INFO     | __main__:train:595 - Epoch: 61 Avg Loss: 4.689 | Constrastive: 4.689 
+2026-02-15 21:15:17.402 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4704 | Old 0.6683 | New 0.3639 | Eval_funcs: ['v1', 'v2']
+2026-02-15 21:15:39.049 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 21:15:39.050 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 21:20:01.820 | INFO     | __main__:train:595 - Epoch: 62 Avg Loss: 4.690 | Constrastive: 4.690 
+2026-02-15 21:25:15.867 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4711 | Old 0.6522 | New 0.3737 | Eval_funcs: ['v1', 'v2']
+2026-02-15 21:25:36.657 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 21:25:36.658 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 21:29:56.735 | INFO     | __main__:train:595 - Epoch: 63 Avg Loss: 4.689 | Constrastive: 4.689 
+2026-02-15 21:35:09.591 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4702 | Old 0.6724 | New 0.3615 | Eval_funcs: ['v1', 'v2']
+2026-02-15 21:35:29.585 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 21:35:29.586 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 21:39:54.763 | INFO     | __main__:train:595 - Epoch: 64 Avg Loss: 4.680 | Constrastive: 4.680 
+2026-02-15 21:45:09.354 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4805 | Old 0.6694 | New 0.3789 | Eval_funcs: ['v1', 'v2']
+2026-02-15 21:45:29.092 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 21:45:29.093 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 21:49:47.714 | INFO     | __main__:train:595 - Epoch: 65 Avg Loss: 4.682 | Constrastive: 4.682 
+2026-02-15 21:54:59.750 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4801 | Old 0.6653 | New 0.3804 | Eval_funcs: ['v1', 'v2']
+2026-02-15 21:55:20.398 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 21:55:20.398 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 21:59:41.146 | INFO     | __main__:train:595 - Epoch: 66 Avg Loss: 4.684 | Constrastive: 4.684 
+2026-02-15 22:05:01.474 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4910 | Old 0.6751 | New 0.3919 | Eval_funcs: ['v1', 'v2']
+2026-02-15 22:05:23.139 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 22:05:23.140 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 22:09:42.110 | INFO     | __main__:train:595 - Epoch: 67 Avg Loss: 4.681 | Constrastive: 4.681 
+2026-02-15 22:14:54.574 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4698 | Old 0.6705 | New 0.3618 | Eval_funcs: ['v1', 'v2']
+2026-02-15 22:15:13.938 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 22:15:13.938 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 22:19:32.664 | INFO     | __main__:train:595 - Epoch: 68 Avg Loss: 4.679 | Constrastive: 4.679 
+2026-02-15 22:24:45.703 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4866 | Old 0.6697 | New 0.3881 | Eval_funcs: ['v1', 'v2']
+2026-02-15 22:25:04.414 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 22:25:04.415 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 22:29:27.425 | INFO     | __main__:train:595 - Epoch: 69 Avg Loss: 4.676 | Constrastive: 4.676 
+2026-02-15 22:34:42.405 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4785 | Old 0.6641 | New 0.3787 | Eval_funcs: ['v1', 'v2']
+2026-02-15 22:35:03.614 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 22:35:03.615 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 22:39:24.199 | INFO     | __main__:train:595 - Epoch: 70 Avg Loss: 4.679 | Constrastive: 4.679 
+2026-02-15 22:44:43.187 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4769 | Old 0.6694 | New 0.3733 | Eval_funcs: ['v1', 'v2']
+2026-02-15 22:45:05.266 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 22:45:05.267 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 22:49:26.954 | INFO     | __main__:train:595 - Epoch: 71 Avg Loss: 4.680 | Constrastive: 4.680 
+2026-02-15 22:54:49.409 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4766 | Old 0.6573 | New 0.3794 | Eval_funcs: ['v1', 'v2']
+2026-02-15 22:55:08.830 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 22:55:08.831 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 22:59:27.520 | INFO     | __main__:train:595 - Epoch: 72 Avg Loss: 4.676 | Constrastive: 4.676 
+2026-02-15 23:04:45.826 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4829 | Old 0.6733 | New 0.3805 | Eval_funcs: ['v1', 'v2']
+2026-02-15 23:05:08.201 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 23:05:08.202 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 23:09:26.900 | INFO     | __main__:train:595 - Epoch: 73 Avg Loss: 4.671 | Constrastive: 4.671 
+2026-02-15 23:14:44.385 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4765 | Old 0.6627 | New 0.3763 | Eval_funcs: ['v1', 'v2']
+2026-02-15 23:15:04.720 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 23:15:04.720 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 23:19:25.815 | INFO     | __main__:train:595 - Epoch: 74 Avg Loss: 4.672 | Constrastive: 4.672 
+2026-02-15 23:24:41.818 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4851 | Old 0.6773 | New 0.3817 | Eval_funcs: ['v1', 'v2']
+2026-02-15 23:25:01.658 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 23:25:01.659 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 23:29:17.926 | INFO     | __main__:train:595 - Epoch: 75 Avg Loss: 4.668 | Constrastive: 4.668 
+2026-02-15 23:34:32.992 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4896 | Old 0.6727 | New 0.3911 | Eval_funcs: ['v1', 'v2']
+2026-02-15 23:34:52.785 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 23:34:52.785 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 23:39:08.997 | INFO     | __main__:train:595 - Epoch: 76 Avg Loss: 4.670 | Constrastive: 4.670 
+2026-02-15 23:44:25.866 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4759 | Old 0.6692 | New 0.3720 | Eval_funcs: ['v1', 'v2']
+2026-02-15 23:44:45.759 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 23:44:45.760 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 23:49:12.776 | INFO     | __main__:train:595 - Epoch: 77 Avg Loss: 4.678 | Constrastive: 4.678 
+2026-02-15 23:54:29.561 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4973 | Old 0.6760 | New 0.4012 | Eval_funcs: ['v1', 'v2']
+2026-02-15 23:54:51.250 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-15 23:54:51.251 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-15 23:59:14.313 | INFO     | __main__:train:595 - Epoch: 78 Avg Loss: 4.674 | Constrastive: 4.674 
+2026-02-16 00:04:26.503 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4825 | Old 0.6734 | New 0.3798 | Eval_funcs: ['v1', 'v2']
+2026-02-16 00:04:46.412 | INFO     | __main__:train:459 - Best Report          Epoch:40 Test Accuracies: All 0.3964 | Old 0.5335 | New 0.3226 | Eval_funcs: ['v2'] 
+2026-02-16 00:04:46.413 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:40 Test Accuracies: All 0.4154 | Old 0.6150 | New 0.3080 | Eval_funcs: ['v2']
+2026-02-16 00:09:07.633 | INFO     | __main__:train:595 - Epoch: 79 Avg Loss: 4.672 | Constrastive: 4.672 
+2026-02-16 00:14:23.514 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4866 | Old 0.6674 | New 0.3892 | Eval_funcs: ['v1', 'v2']
+2026-02-16 00:21:12.296 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2']
+2026-02-16 00:22:11.059 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 00:22:15.625 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 00:22:15.626 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 00:26:29.934 | INFO     | __main__:train:595 - Epoch: 80 Avg Loss: 4.668 | Constrastive: 4.668 
+2026-02-16 00:31:41.673 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4934 | Old 0.6666 | New 0.4002 | Eval_funcs: ['v1', 'v2']
+2026-02-16 00:32:02.479 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 00:32:02.480 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 00:36:19.546 | INFO     | __main__:train:595 - Epoch: 81 Avg Loss: 4.667 | Constrastive: 4.667 
+2026-02-16 00:41:34.381 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4987 | Old 0.6778 | New 0.4024 | Eval_funcs: ['v1', 'v2']
+2026-02-16 00:41:54.397 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 00:41:54.398 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 00:46:11.219 | INFO     | __main__:train:595 - Epoch: 82 Avg Loss: 4.663 | Constrastive: 4.663 
+2026-02-16 00:51:25.763 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4933 | Old 0.6758 | New 0.3952 | Eval_funcs: ['v1', 'v2']
+2026-02-16 00:51:45.541 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 00:51:45.542 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 00:56:04.263 | INFO     | __main__:train:595 - Epoch: 83 Avg Loss: 4.662 | Constrastive: 4.662 
+2026-02-16 01:01:20.839 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4879 | Old 0.6678 | New 0.3912 | Eval_funcs: ['v1', 'v2']
+2026-02-16 01:01:41.345 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 01:01:41.346 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 01:06:00.339 | INFO     | __main__:train:595 - Epoch: 84 Avg Loss: 4.665 | Constrastive: 4.665 
+2026-02-16 01:11:19.381 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5105 | Old 0.6755 | New 0.4217 | Eval_funcs: ['v1', 'v2']
+2026-02-16 01:11:39.634 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 01:11:39.635 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 01:16:05.143 | INFO     | __main__:train:595 - Epoch: 85 Avg Loss: 4.664 | Constrastive: 4.664 
+2026-02-16 01:21:19.347 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5002 | Old 0.6716 | New 0.4080 | Eval_funcs: ['v1', 'v2']
+2026-02-16 01:21:39.472 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 01:21:39.473 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 01:25:58.268 | INFO     | __main__:train:595 - Epoch: 86 Avg Loss: 4.669 | Constrastive: 4.669 
+2026-02-16 01:31:13.125 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4812 | Old 0.6436 | New 0.3938 | Eval_funcs: ['v1', 'v2']
+2026-02-16 01:31:33.952 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 01:31:33.953 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 01:35:51.030 | INFO     | __main__:train:595 - Epoch: 87 Avg Loss: 4.666 | Constrastive: 4.666 
+2026-02-16 01:41:05.994 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4894 | Old 0.6639 | New 0.3955 | Eval_funcs: ['v1', 'v2']
+2026-02-16 01:41:27.305 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 01:41:27.306 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 01:45:45.763 | INFO     | __main__:train:595 - Epoch: 88 Avg Loss: 4.657 | Constrastive: 4.657 
+2026-02-16 01:51:00.156 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4920 | Old 0.6735 | New 0.3943 | Eval_funcs: ['v1', 'v2']
+2026-02-16 01:51:19.705 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 01:51:19.706 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 01:55:44.060 | INFO     | __main__:train:595 - Epoch: 89 Avg Loss: 4.660 | Constrastive: 4.660 
+2026-02-16 02:00:57.806 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4888 | Old 0.6660 | New 0.3934 | Eval_funcs: ['v1', 'v2']
+2026-02-16 02:01:19.270 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 02:01:19.271 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 02:05:35.148 | INFO     | __main__:train:595 - Epoch: 90 Avg Loss: 4.659 | Constrastive: 4.659 
+2026-02-16 02:10:51.311 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4928 | Old 0.6744 | New 0.3951 | Eval_funcs: ['v1', 'v2']
+2026-02-16 02:11:11.384 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 02:11:11.384 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 02:15:28.379 | INFO     | __main__:train:595 - Epoch: 91 Avg Loss: 4.661 | Constrastive: 4.661 
+2026-02-16 02:20:43.145 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5134 | Old 0.6714 | New 0.4285 | Eval_funcs: ['v1', 'v2']
+2026-02-16 02:21:04.095 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 02:21:04.096 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 02:25:21.234 | INFO     | __main__:train:595 - Epoch: 92 Avg Loss: 4.657 | Constrastive: 4.657 
+2026-02-16 02:30:37.373 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5062 | Old 0.6672 | New 0.4196 | Eval_funcs: ['v1', 'v2']
+2026-02-16 02:30:57.104 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 02:30:57.104 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 02:35:21.464 | INFO     | __main__:train:595 - Epoch: 93 Avg Loss: 4.657 | Constrastive: 4.657 
+2026-02-16 02:40:35.530 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5107 | Old 0.6725 | New 0.4237 | Eval_funcs: ['v1', 'v2']
+2026-02-16 02:40:56.278 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 02:40:56.279 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 02:45:20.138 | INFO     | __main__:train:595 - Epoch: 94 Avg Loss: 4.652 | Constrastive: 4.652 
+2026-02-16 02:50:35.651 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5028 | Old 0.6840 | New 0.4054 | Eval_funcs: ['v1', 'v2']
+2026-02-16 02:50:55.530 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 02:50:55.531 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 02:55:13.845 | INFO     | __main__:train:595 - Epoch: 95 Avg Loss: 4.656 | Constrastive: 4.656 
+2026-02-16 03:00:30.094 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5075 | Old 0.6720 | New 0.4190 | Eval_funcs: ['v1', 'v2']
+2026-02-16 03:00:50.918 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 03:00:50.918 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 03:05:11.747 | INFO     | __main__:train:595 - Epoch: 96 Avg Loss: 4.652 | Constrastive: 4.652 
+2026-02-16 03:10:28.408 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.4957 | Old 0.6638 | New 0.4053 | Eval_funcs: ['v1', 'v2']
+2026-02-16 03:10:48.439 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 03:10:48.440 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 03:15:12.830 | INFO     | __main__:train:595 - Epoch: 97 Avg Loss: 4.650 | Constrastive: 4.650 
+2026-02-16 03:20:28.112 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5058 | Old 0.6790 | New 0.4125 | Eval_funcs: ['v1', 'v2']
+2026-02-16 03:20:50.253 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 03:20:50.253 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 03:25:17.042 | INFO     | __main__:train:595 - Epoch: 98 Avg Loss: 4.652 | Constrastive: 4.652 
+2026-02-16 03:30:38.243 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5151 | Old 0.6743 | New 0.4295 | Eval_funcs: ['v1', 'v2']
+2026-02-16 03:30:58.647 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 03:30:58.647 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 03:35:16.448 | INFO     | __main__:train:595 - Epoch: 99 Avg Loss: 4.653 | Constrastive: 4.653 
+2026-02-16 03:40:36.603 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5043 | Old 0.6627 | New 0.4190 | Eval_funcs: ['v1', 'v2']
+2026-02-16 03:40:56.516 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 03:40:56.517 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 03:45:19.817 | INFO     | __main__:train:595 - Epoch: 100 Avg Loss: 4.658 | Constrastive: 4.658 
+2026-02-16 03:50:36.594 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5093 | Old 0.6772 | New 0.4190 | Eval_funcs: ['v1', 'v2']
+2026-02-16 03:50:59.143 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 03:50:59.145 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 03:55:24.132 | INFO     | __main__:train:595 - Epoch: 101 Avg Loss: 4.653 | Constrastive: 4.653 
+2026-02-16 04:00:48.021 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5119 | Old 0.6743 | New 0.4245 | Eval_funcs: ['v1', 'v2']
+2026-02-16 04:01:07.911 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 04:01:07.912 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 04:05:43.944 | INFO     | __main__:train:595 - Epoch: 102 Avg Loss: 4.654 | Constrastive: 4.654 
+2026-02-16 04:10:59.432 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5116 | Old 0.6685 | New 0.4271 | Eval_funcs: ['v1', 'v2']
+2026-02-16 04:11:20.696 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 04:11:20.697 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 04:15:38.660 | INFO     | __main__:train:595 - Epoch: 103 Avg Loss: 4.646 | Constrastive: 4.646 
+2026-02-16 04:20:52.653 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5079 | Old 0.6697 | New 0.4208 | Eval_funcs: ['v1', 'v2']
+2026-02-16 04:21:12.736 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 04:21:12.737 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 04:25:36.440 | INFO     | __main__:train:595 - Epoch: 104 Avg Loss: 4.646 | Constrastive: 4.646 
+2026-02-16 04:30:49.847 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5164 | Old 0.6798 | New 0.4285 | Eval_funcs: ['v1', 'v2']
+2026-02-16 04:31:11.060 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 04:31:11.061 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 04:35:29.056 | INFO     | __main__:train:595 - Epoch: 105 Avg Loss: 4.655 | Constrastive: 4.655 
+2026-02-16 04:40:50.259 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5077 | Old 0.6773 | New 0.4164 | Eval_funcs: ['v1', 'v2']
+2026-02-16 04:41:11.532 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 04:41:11.532 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 04:45:29.088 | INFO     | __main__:train:595 - Epoch: 106 Avg Loss: 4.643 | Constrastive: 4.643 
+2026-02-16 04:50:42.867 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5119 | Old 0.6728 | New 0.4253 | Eval_funcs: ['v1', 'v2']
+2026-02-16 04:51:03.224 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 04:51:03.225 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 04:55:20.140 | INFO     | __main__:train:595 - Epoch: 107 Avg Loss: 4.647 | Constrastive: 4.647 
+2026-02-16 05:00:36.065 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5060 | Old 0.6752 | New 0.4150 | Eval_funcs: ['v1', 'v2']
+2026-02-16 05:00:55.818 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 05:00:55.819 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 05:05:12.507 | INFO     | __main__:train:595 - Epoch: 108 Avg Loss: 4.644 | Constrastive: 4.644 
+2026-02-16 05:10:27.986 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5121 | Old 0.6761 | New 0.4238 | Eval_funcs: ['v1', 'v2']
+2026-02-16 05:10:48.506 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 05:10:48.507 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 05:15:04.990 | INFO     | __main__:train:595 - Epoch: 109 Avg Loss: 4.644 | Constrastive: 4.644 
+2026-02-16 05:20:20.405 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5101 | Old 0.6781 | New 0.4198 | Eval_funcs: ['v1', 'v2']
+2026-02-16 05:20:40.077 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 05:20:40.078 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 05:24:58.303 | INFO     | __main__:train:595 - Epoch: 110 Avg Loss: 4.641 | Constrastive: 4.641 
+2026-02-16 05:30:12.413 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5132 | Old 0.6744 | New 0.4264 | Eval_funcs: ['v1', 'v2']
+2026-02-16 05:30:32.545 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 05:30:32.546 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 05:34:49.496 | INFO     | __main__:train:595 - Epoch: 111 Avg Loss: 4.636 | Constrastive: 4.636 
+2026-02-16 05:40:03.781 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5152 | Old 0.6708 | New 0.4315 | Eval_funcs: ['v1', 'v2']
+2026-02-16 05:40:25.065 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 05:40:25.066 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 05:44:41.923 | INFO     | __main__:train:595 - Epoch: 112 Avg Loss: 4.639 | Constrastive: 4.639 
+2026-02-16 05:49:58.537 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5263 | Old 0.6781 | New 0.4446 | Eval_funcs: ['v1', 'v2']
+2026-02-16 05:50:18.862 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 05:50:18.863 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 05:54:35.789 | INFO     | __main__:train:595 - Epoch: 113 Avg Loss: 4.641 | Constrastive: 4.641 
+2026-02-16 05:59:51.463 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5310 | Old 0.6746 | New 0.4537 | Eval_funcs: ['v1', 'v2']
+2026-02-16 06:00:12.065 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 06:00:12.065 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 06:04:28.437 | INFO     | __main__:train:595 - Epoch: 114 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 06:09:42.945 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5216 | Old 0.6728 | New 0.4403 | Eval_funcs: ['v1', 'v2']
+2026-02-16 06:10:02.819 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 06:10:02.820 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 06:14:22.493 | INFO     | __main__:train:595 - Epoch: 115 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 06:19:35.416 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5187 | Old 0.6743 | New 0.4349 | Eval_funcs: ['v1', 'v2']
+2026-02-16 06:19:55.757 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 06:19:55.758 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 06:24:11.119 | INFO     | __main__:train:595 - Epoch: 116 Avg Loss: 4.641 | Constrastive: 4.641 
+2026-02-16 06:29:24.924 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5211 | Old 0.6761 | New 0.4378 | Eval_funcs: ['v1', 'v2']
+2026-02-16 06:29:45.022 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 06:29:45.023 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 06:34:00.964 | INFO     | __main__:train:595 - Epoch: 117 Avg Loss: 4.643 | Constrastive: 4.643 
+2026-02-16 06:39:15.605 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5282 | Old 0.6788 | New 0.4471 | Eval_funcs: ['v1', 'v2']
+2026-02-16 06:39:35.083 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 06:39:35.084 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 06:43:52.658 | INFO     | __main__:train:595 - Epoch: 118 Avg Loss: 4.644 | Constrastive: 4.644 
+2026-02-16 06:49:05.940 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5233 | Old 0.6781 | New 0.4399 | Eval_funcs: ['v1', 'v2']
+2026-02-16 06:49:26.375 | INFO     | __main__:train:459 - Best Report          Epoch:80 Test Accuracies: All 0.4465 | Old 0.5823 | New 0.3735 | Eval_funcs: ['v2'] 
+2026-02-16 06:49:26.375 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:80 Test Accuracies: All 0.4663 | Old 0.6384 | New 0.3737 | Eval_funcs: ['v2']
+2026-02-16 06:53:44.271 | INFO     | __main__:train:595 - Epoch: 119 Avg Loss: 4.639 | Constrastive: 4.639 
+2026-02-16 06:58:59.003 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5224 | Old 0.6759 | New 0.4398 | Eval_funcs: ['v1', 'v2']
+2026-02-16 07:05:46.266 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2']
+2026-02-16 07:06:45.073 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 07:06:49.389 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 07:06:49.390 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 07:11:10.222 | INFO     | __main__:train:595 - Epoch: 120 Avg Loss: 4.644 | Constrastive: 4.644 
+2026-02-16 07:16:20.242 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5239 | Old 0.6759 | New 0.4421 | Eval_funcs: ['v1', 'v2']
+2026-02-16 07:16:40.577 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 07:16:40.578 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 07:21:13.034 | INFO     | __main__:train:595 - Epoch: 121 Avg Loss: 4.637 | Constrastive: 4.637 
+2026-02-16 07:26:23.714 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5241 | Old 0.6847 | New 0.4376 | Eval_funcs: ['v1', 'v2']
+2026-02-16 07:26:44.800 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 07:26:44.800 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 07:31:09.486 | INFO     | __main__:train:595 - Epoch: 122 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 07:36:22.100 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5290 | Old 0.6775 | New 0.4492 | Eval_funcs: ['v1', 'v2']
+2026-02-16 07:36:43.781 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 07:36:43.781 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 07:41:03.191 | INFO     | __main__:train:595 - Epoch: 123 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 07:46:15.286 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5260 | Old 0.6770 | New 0.4448 | Eval_funcs: ['v1', 'v2']
+2026-02-16 07:46:36.303 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 07:46:36.304 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 07:50:58.214 | INFO     | __main__:train:595 - Epoch: 124 Avg Loss: 4.633 | Constrastive: 4.633 
+2026-02-16 07:56:12.901 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5358 | Old 0.6746 | New 0.4611 | Eval_funcs: ['v1', 'v2']
+2026-02-16 07:56:33.687 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 07:56:33.687 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:00:50.965 | INFO     | __main__:train:595 - Epoch: 125 Avg Loss: 4.639 | Constrastive: 4.639 
+2026-02-16 08:06:04.222 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5168 | Old 0.6742 | New 0.4321 | Eval_funcs: ['v1', 'v2']
+2026-02-16 08:06:24.644 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 08:06:24.644 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:10:41.359 | INFO     | __main__:train:595 - Epoch: 126 Avg Loss: 4.630 | Constrastive: 4.630 
+2026-02-16 08:15:50.868 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5175 | Old 0.6638 | New 0.4387 | Eval_funcs: ['v1', 'v2']
+2026-02-16 08:16:11.533 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 08:16:11.534 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:20:27.898 | INFO     | __main__:train:595 - Epoch: 127 Avg Loss: 4.632 | Constrastive: 4.632 
+2026-02-16 08:25:41.754 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5270 | Old 0.6759 | New 0.4469 | Eval_funcs: ['v1', 'v2']
+2026-02-16 08:26:02.175 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 08:26:02.176 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:30:18.890 | INFO     | __main__:train:595 - Epoch: 128 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 08:35:33.356 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5256 | Old 0.6766 | New 0.4444 | Eval_funcs: ['v1', 'v2']
+2026-02-16 08:35:53.775 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 08:35:53.776 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:40:09.385 | INFO     | __main__:train:595 - Epoch: 129 Avg Loss: 4.629 | Constrastive: 4.629 
+2026-02-16 08:45:22.141 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5279 | Old 0.6646 | New 0.4544 | Eval_funcs: ['v1', 'v2']
+2026-02-16 08:45:42.700 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 08:45:42.700 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:49:58.182 | INFO     | __main__:train:595 - Epoch: 130 Avg Loss: 4.633 | Constrastive: 4.633 
+2026-02-16 08:55:13.246 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5241 | Old 0.6705 | New 0.4453 | Eval_funcs: ['v1', 'v2']
+2026-02-16 08:55:33.929 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 08:55:33.929 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 08:59:49.370 | INFO     | __main__:train:595 - Epoch: 131 Avg Loss: 4.634 | Constrastive: 4.634 
+2026-02-16 09:04:59.620 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5138 | Old 0.6581 | New 0.4362 | Eval_funcs: ['v1', 'v2']
+2026-02-16 09:05:20.111 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 09:05:20.111 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 09:09:36.247 | INFO     | __main__:train:595 - Epoch: 132 Avg Loss: 4.630 | Constrastive: 4.630 
+2026-02-16 09:14:51.967 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5359 | Old 0.6879 | New 0.4541 | Eval_funcs: ['v1', 'v2']
+2026-02-16 09:15:12.671 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 09:15:12.672 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 09:19:35.258 | INFO     | __main__:train:595 - Epoch: 133 Avg Loss: 4.629 | Constrastive: 4.629 
+2026-02-16 09:24:46.403 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5180 | Old 0.6770 | New 0.4324 | Eval_funcs: ['v1', 'v2']
+2026-02-16 09:25:06.401 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 09:25:06.401 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 09:29:24.225 | INFO     | __main__:train:595 - Epoch: 134 Avg Loss: 4.630 | Constrastive: 4.630 
+2026-02-16 09:34:37.438 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5212 | Old 0.6720 | New 0.4400 | Eval_funcs: ['v1', 'v2']
+2026-02-16 09:34:58.034 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 09:34:58.035 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 09:39:14.912 | INFO     | __main__:train:595 - Epoch: 135 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 09:44:31.695 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5353 | Old 0.6738 | New 0.4608 | Eval_funcs: ['v1', 'v2']
+2026-02-16 09:44:52.019 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 09:44:52.020 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 09:49:17.210 | INFO     | __main__:train:595 - Epoch: 136 Avg Loss: 4.630 | Constrastive: 4.630 
+2026-02-16 09:54:29.997 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5303 | Old 0.6713 | New 0.4544 | Eval_funcs: ['v1', 'v2']
+2026-02-16 09:54:50.667 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 09:54:50.667 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 09:59:11.244 | INFO     | __main__:train:595 - Epoch: 137 Avg Loss: 4.628 | Constrastive: 4.628 
+2026-02-16 10:04:23.784 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5338 | Old 0.6736 | New 0.4586 | Eval_funcs: ['v1', 'v2']
+2026-02-16 10:04:44.408 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 10:04:44.409 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 10:09:00.907 | INFO     | __main__:train:595 - Epoch: 138 Avg Loss: 4.627 | Constrastive: 4.627 
+2026-02-16 10:14:13.568 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5299 | Old 0.6795 | New 0.4495 | Eval_funcs: ['v1', 'v2']
+2026-02-16 10:14:34.304 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 10:14:34.305 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 10:18:55.885 | INFO     | __main__:train:595 - Epoch: 139 Avg Loss: 4.629 | Constrastive: 4.629 
+2026-02-16 10:24:08.911 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5288 | Old 0.6574 | New 0.4596 | Eval_funcs: ['v1', 'v2']
+2026-02-16 10:24:29.652 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 10:24:29.653 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 10:28:52.636 | INFO     | __main__:train:595 - Epoch: 140 Avg Loss: 4.629 | Constrastive: 4.629 
+2026-02-16 10:34:11.884 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5312 | Old 0.6688 | New 0.4571 | Eval_funcs: ['v1', 'v2']
+2026-02-16 10:34:32.208 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 10:34:32.209 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 10:38:50.757 | INFO     | __main__:train:595 - Epoch: 141 Avg Loss: 4.628 | Constrastive: 4.628 
+2026-02-16 10:44:00.121 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5223 | Old 0.6557 | New 0.4505 | Eval_funcs: ['v1', 'v2']
+2026-02-16 10:44:20.672 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 10:44:20.672 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 10:48:40.856 | INFO     | __main__:train:595 - Epoch: 142 Avg Loss: 4.627 | Constrastive: 4.627 
+2026-02-16 10:53:49.858 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5235 | Old 0.6747 | New 0.4421 | Eval_funcs: ['v1', 'v2']
+2026-02-16 10:54:10.606 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 10:54:10.606 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 10:58:33.658 | INFO     | __main__:train:595 - Epoch: 143 Avg Loss: 4.627 | Constrastive: 4.627 
+2026-02-16 11:03:45.822 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5302 | Old 0.6719 | New 0.4540 | Eval_funcs: ['v1', 'v2']
+2026-02-16 11:04:06.316 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 11:04:06.316 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 11:08:22.954 | INFO     | __main__:train:595 - Epoch: 144 Avg Loss: 4.628 | Constrastive: 4.628 
+2026-02-16 11:13:39.345 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5314 | Old 0.6662 | New 0.4589 | Eval_funcs: ['v1', 'v2']
+2026-02-16 11:14:00.175 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 11:14:00.176 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 11:18:28.904 | INFO     | __main__:train:595 - Epoch: 145 Avg Loss: 4.624 | Constrastive: 4.624 
+2026-02-16 11:23:53.583 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5341 | Old 0.6690 | New 0.4615 | Eval_funcs: ['v1', 'v2']
+2026-02-16 11:24:25.818 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 11:24:25.819 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 11:28:53.895 | INFO     | __main__:train:595 - Epoch: 146 Avg Loss: 4.625 | Constrastive: 4.625 
+2026-02-16 11:34:13.128 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5232 | Old 0.6533 | New 0.4531 | Eval_funcs: ['v1', 'v2']
+2026-02-16 11:34:33.832 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 11:34:33.832 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 11:38:58.574 | INFO     | __main__:train:595 - Epoch: 147 Avg Loss: 4.630 | Constrastive: 4.630 
+2026-02-16 11:44:15.006 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5231 | Old 0.6559 | New 0.4516 | Eval_funcs: ['v1', 'v2']
+2026-02-16 11:44:36.490 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 11:44:36.491 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 11:49:00.229 | INFO     | __main__:train:595 - Epoch: 148 Avg Loss: 4.635 | Constrastive: 4.635 
+2026-02-16 11:54:15.639 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5321 | Old 0.6693 | New 0.4583 | Eval_funcs: ['v1', 'v2']
+2026-02-16 11:54:35.959 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 11:54:35.959 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 11:59:01.774 | INFO     | __main__:train:595 - Epoch: 149 Avg Loss: 4.621 | Constrastive: 4.621 
+2026-02-16 12:04:21.414 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5330 | Old 0.6693 | New 0.4597 | Eval_funcs: ['v1', 'v2']
+2026-02-16 12:04:43.639 | INFO     | __main__:train:459 - Best Report          Epoch:120 Test Accuracies: All 0.4927 | Old 0.6069 | New 0.4313 | Eval_funcs: ['v2'] 
+2026-02-16 12:04:43.640 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:120 Test Accuracies: All 0.4961 | Old 0.6413 | New 0.4179 | Eval_funcs: ['v2']
+2026-02-16 12:09:03.817 | INFO     | __main__:train:595 - Epoch: 150 Avg Loss: 4.622 | Constrastive: 4.622 
+2026-02-16 12:14:17.746 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5377 | Old 0.6735 | New 0.4646 | Eval_funcs: ['v1', 'v2']
+2026-02-16 12:21:07.430 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2']
+2026-02-16 12:22:05.125 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5151 | Old 0.6572 | New 0.4387 | Eval_funcs: ['v2']
+2026-02-16 12:22:09.518 | INFO     | __main__:train:459 - Best Report          Epoch:151 Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2'] 
+2026-02-16 12:22:09.519 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:151 Test Accuracies: All 0.5151 | Old 0.6572 | New 0.4387 | Eval_funcs: ['v2']
+2026-02-16 12:26:33.450 | INFO     | __main__:train:595 - Epoch: 151 Avg Loss: 4.626 | Constrastive: 4.626 
+2026-02-16 12:31:45.598 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5401 | Old 0.6701 | New 0.4702 | Eval_funcs: ['v1', 'v2']
+2026-02-16 12:38:39.444 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5069 | Old 0.6035 | New 0.4549 | Eval_funcs: ['v2']
+2026-02-16 12:39:38.867 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5123 | Old 0.6446 | New 0.4412 | Eval_funcs: ['v2']
+2026-02-16 12:39:38.885 | INFO     | __main__:train:459 - Best Report          Epoch:151 Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2'] 
+2026-02-16 12:39:38.885 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:151 Test Accuracies: All 0.5151 | Old 0.6572 | New 0.4387 | Eval_funcs: ['v2']
+2026-02-16 12:44:00.702 | INFO     | __main__:train:595 - Epoch: 152 Avg Loss: 4.615 | Constrastive: 4.615 
+2026-02-16 12:49:14.304 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5391 | Old 0.6669 | New 0.4704 | Eval_funcs: ['v1', 'v2']
+2026-02-16 12:56:04.640 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5078 | Old 0.5976 | New 0.4594 | Eval_funcs: ['v2']
+2026-02-16 12:57:02.735 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 12:57:02.755 | INFO     | __main__:train:459 - Best Report          Epoch:151 Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2'] 
+2026-02-16 12:57:02.756 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 13:01:26.082 | INFO     | __main__:train:595 - Epoch: 153 Avg Loss: 4.613 | Constrastive: 4.613 
+2026-02-16 13:06:40.575 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5293 | Old 0.6660 | New 0.4557 | Eval_funcs: ['v1', 'v2']
+2026-02-16 13:07:01.038 | INFO     | __main__:train:459 - Best Report          Epoch:151 Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2'] 
+2026-02-16 13:07:01.039 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 13:11:22.043 | INFO     | __main__:train:595 - Epoch: 154 Avg Loss: 4.620 | Constrastive: 4.620 
+2026-02-16 13:16:37.842 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5433 | Old 0.6690 | New 0.4756 | Eval_funcs: ['v1', 'v2']
+2026-02-16 13:23:26.152 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5071 | Old 0.5899 | New 0.4626 | Eval_funcs: ['v2']
+2026-02-16 13:24:24.885 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.4979 | Old 0.6197 | New 0.4324 | Eval_funcs: ['v2']
+2026-02-16 13:24:24.905 | INFO     | __main__:train:459 - Best Report          Epoch:151 Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2'] 
+2026-02-16 13:24:24.905 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 13:28:42.907 | INFO     | __main__:train:595 - Epoch: 155 Avg Loss: 4.625 | Constrastive: 4.625 
+2026-02-16 13:33:56.440 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5221 | Old 0.6525 | New 0.4519 | Eval_funcs: ['v1', 'v2']
+2026-02-16 13:34:18.198 | INFO     | __main__:train:459 - Best Report          Epoch:151 Test Accuracies: All 0.5109 | Old 0.6171 | New 0.4538 | Eval_funcs: ['v2'] 
+2026-02-16 13:34:18.198 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 13:38:40.590 | INFO     | __main__:train:595 - Epoch: 156 Avg Loss: 4.626 | Constrastive: 4.626 
+2026-02-16 13:43:52.188 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5405 | Old 0.6720 | New 0.4698 | Eval_funcs: ['v1', 'v2']
+2026-02-16 13:50:41.087 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2']
+2026-02-16 13:51:40.505 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5172 | Old 0.6392 | New 0.4515 | Eval_funcs: ['v2']
+2026-02-16 13:51:44.459 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 13:51:44.461 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 13:56:09.453 | INFO     | __main__:train:595 - Epoch: 157 Avg Loss: 4.620 | Constrastive: 4.620 
+2026-02-16 14:01:20.521 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5332 | Old 0.6753 | New 0.4567 | Eval_funcs: ['v1', 'v2']
+2026-02-16 14:01:43.060 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 14:01:43.061 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 14:06:05.393 | INFO     | __main__:train:595 - Epoch: 158 Avg Loss: 4.622 | Constrastive: 4.622 
+2026-02-16 14:11:18.119 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5393 | Old 0.6622 | New 0.4732 | Eval_funcs: ['v1', 'v2']
+2026-02-16 14:11:39.233 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 14:11:39.233 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 14:15:57.429 | INFO     | __main__:train:595 - Epoch: 159 Avg Loss: 4.623 | Constrastive: 4.623 
+2026-02-16 14:21:10.418 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5286 | Old 0.6645 | New 0.4554 | Eval_funcs: ['v1', 'v2']
+2026-02-16 14:27:59.004 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5193 | Old 0.5982 | New 0.4769 | Eval_funcs: ['v2']
+2026-02-16 14:28:58.570 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5078 | Old 0.6257 | New 0.4444 | Eval_funcs: ['v2']
+2026-02-16 14:28:58.592 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 14:28:58.593 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:153 Test Accuracies: All 0.5178 | Old 0.6442 | New 0.4498 | Eval_funcs: ['v2']
+2026-02-16 14:33:15.854 | INFO     | __main__:train:595 - Epoch: 160 Avg Loss: 4.611 | Constrastive: 4.611 
+2026-02-16 14:38:29.068 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5442 | Old 0.6636 | New 0.4800 | Eval_funcs: ['v1', 'v2']
+2026-02-16 14:45:21.276 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5053 | Old 0.5971 | New 0.4559 | Eval_funcs: ['v2']
+2026-02-16 14:46:17.884 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5189 | Old 0.6300 | New 0.4591 | Eval_funcs: ['v2']
+2026-02-16 14:46:17.904 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 14:46:17.905 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:161 Test Accuracies: All 0.5189 | Old 0.6300 | New 0.4591 | Eval_funcs: ['v2']
+2026-02-16 14:50:48.476 | INFO     | __main__:train:595 - Epoch: 161 Avg Loss: 4.617 | Constrastive: 4.617 
+2026-02-16 14:56:03.314 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5309 | Old 0.6568 | New 0.4632 | Eval_funcs: ['v1', 'v2']
+2026-02-16 14:56:24.235 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 14:56:24.236 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:161 Test Accuracies: All 0.5189 | Old 0.6300 | New 0.4591 | Eval_funcs: ['v2']
+2026-02-16 15:00:43.966 | INFO     | __main__:train:595 - Epoch: 162 Avg Loss: 4.618 | Constrastive: 4.618 
+2026-02-16 15:05:55.159 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5436 | Old 0.6646 | New 0.4785 | Eval_funcs: ['v1', 'v2']
+2026-02-16 15:12:43.034 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5233 | Old 0.6085 | New 0.4774 | Eval_funcs: ['v2']
+2026-02-16 15:13:41.872 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5165 | Old 0.6301 | New 0.4554 | Eval_funcs: ['v2']
+2026-02-16 15:13:41.894 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 15:13:41.894 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:161 Test Accuracies: All 0.5189 | Old 0.6300 | New 0.4591 | Eval_funcs: ['v2']
+2026-02-16 15:17:57.913 | INFO     | __main__:train:595 - Epoch: 163 Avg Loss: 4.618 | Constrastive: 4.618 
+2026-02-16 15:23:12.569 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5415 | Old 0.6567 | New 0.4796 | Eval_funcs: ['v1', 'v2']
+2026-02-16 15:30:01.219 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5152 | Old 0.5927 | New 0.4735 | Eval_funcs: ['v2']
+2026-02-16 15:31:00.582 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5134 | Old 0.6225 | New 0.4547 | Eval_funcs: ['v2']
+2026-02-16 15:31:00.598 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 15:31:00.598 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:161 Test Accuracies: All 0.5189 | Old 0.6300 | New 0.4591 | Eval_funcs: ['v2']
+2026-02-16 15:35:19.455 | INFO     | __main__:train:595 - Epoch: 164 Avg Loss: 4.617 | Constrastive: 4.617 
+2026-02-16 15:40:32.041 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5232 | Old 0.6519 | New 0.4539 | Eval_funcs: ['v1', 'v2']
+2026-02-16 15:40:53.155 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 15:40:53.156 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:161 Test Accuracies: All 0.5189 | Old 0.6300 | New 0.4591 | Eval_funcs: ['v2']
+2026-02-16 15:45:09.735 | INFO     | __main__:train:595 - Epoch: 165 Avg Loss: 4.615 | Constrastive: 4.615 
+2026-02-16 15:50:22.763 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5495 | Old 0.6641 | New 0.4878 | Eval_funcs: ['v1', 'v2']
+2026-02-16 15:57:11.215 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5100 | Old 0.5929 | New 0.4654 | Eval_funcs: ['v2']
+2026-02-16 15:58:11.000 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 15:58:11.017 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 15:58:11.017 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 16:02:45.165 | INFO     | __main__:train:595 - Epoch: 166 Avg Loss: 4.610 | Constrastive: 4.610 
+2026-02-16 16:07:57.654 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5392 | Old 0.6599 | New 0.4743 | Eval_funcs: ['v1', 'v2']
+2026-02-16 16:08:19.454 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 16:08:19.454 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 16:12:44.182 | INFO     | __main__:train:595 - Epoch: 167 Avg Loss: 4.619 | Constrastive: 4.619 
+2026-02-16 16:17:56.177 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5500 | Old 0.6635 | New 0.4890 | Eval_funcs: ['v1', 'v2']
+2026-02-16 16:24:47.651 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5096 | Old 0.5869 | New 0.4680 | Eval_funcs: ['v2']
+2026-02-16 16:25:47.657 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5168 | Old 0.6423 | New 0.4493 | Eval_funcs: ['v2']
+2026-02-16 16:25:47.675 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 16:25:47.675 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 16:30:10.222 | INFO     | __main__:train:595 - Epoch: 168 Avg Loss: 4.615 | Constrastive: 4.615 
+2026-02-16 16:35:22.874 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5323 | Old 0.6476 | New 0.4703 | Eval_funcs: ['v1', 'v2']
+2026-02-16 16:35:46.083 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 16:35:46.084 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 16:40:06.368 | INFO     | __main__:train:595 - Epoch: 169 Avg Loss: 4.627 | Constrastive: 4.627 
+2026-02-16 16:45:16.577 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5217 | Old 0.6499 | New 0.4527 | Eval_funcs: ['v1', 'v2']
+2026-02-16 16:45:38.771 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 16:45:38.771 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 16:50:01.197 | INFO     | __main__:train:595 - Epoch: 170 Avg Loss: 4.616 | Constrastive: 4.616 
+2026-02-16 16:55:12.794 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5383 | Old 0.6589 | New 0.4734 | Eval_funcs: ['v1', 'v2']
+2026-02-16 16:55:35.441 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 16:55:35.442 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 16:59:54.960 | INFO     | __main__:train:595 - Epoch: 171 Avg Loss: 4.615 | Constrastive: 4.615 
+2026-02-16 17:05:04.990 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5442 | Old 0.6647 | New 0.4794 | Eval_funcs: ['v1', 'v2']
+2026-02-16 17:11:54.321 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5197 | Old 0.5965 | New 0.4783 | Eval_funcs: ['v2']
+2026-02-16 17:12:50.868 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5174 | Old 0.6268 | New 0.4584 | Eval_funcs: ['v2']
+2026-02-16 17:12:50.891 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 17:12:50.891 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 17:17:16.096 | INFO     | __main__:train:595 - Epoch: 172 Avg Loss: 4.618 | Constrastive: 4.618 
+2026-02-16 17:22:28.678 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5390 | Old 0.6520 | New 0.4782 | Eval_funcs: ['v1', 'v2']
+2026-02-16 17:22:50.696 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 17:22:50.697 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 17:27:11.369 | INFO     | __main__:train:595 - Epoch: 173 Avg Loss: 4.614 | Constrastive: 4.614 
+2026-02-16 17:32:22.520 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5328 | Old 0.6622 | New 0.4631 | Eval_funcs: ['v1', 'v2']
+2026-02-16 17:32:44.376 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 17:32:44.376 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 17:37:04.606 | INFO     | __main__:train:595 - Epoch: 174 Avg Loss: 4.630 | Constrastive: 4.630 
+2026-02-16 17:42:15.830 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5227 | Old 0.6371 | New 0.4612 | Eval_funcs: ['v1', 'v2']
+2026-02-16 17:42:38.240 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 17:42:38.240 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 17:46:58.761 | INFO     | __main__:train:595 - Epoch: 175 Avg Loss: 4.618 | Constrastive: 4.618 
+2026-02-16 17:52:12.699 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5334 | Old 0.6638 | New 0.4633 | Eval_funcs: ['v1', 'v2']
+2026-02-16 17:52:34.942 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 17:52:34.943 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 17:56:59.285 | INFO     | __main__:train:595 - Epoch: 176 Avg Loss: 4.611 | Constrastive: 4.611 
+2026-02-16 18:02:09.858 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5359 | Old 0.6581 | New 0.4702 | Eval_funcs: ['v1', 'v2']
+2026-02-16 18:02:33.521 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 18:02:33.521 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 18:07:05.309 | INFO     | __main__:train:595 - Epoch: 177 Avg Loss: 4.610 | Constrastive: 4.610 
+2026-02-16 18:12:16.887 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5437 | Old 0.6559 | New 0.4834 | Eval_funcs: ['v1', 'v2']
+2026-02-16 18:19:08.983 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5187 | Old 0.5953 | New 0.4776 | Eval_funcs: ['v2']
+2026-02-16 18:20:08.101 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5095 | Old 0.6211 | New 0.4495 | Eval_funcs: ['v2']
+2026-02-16 18:20:08.121 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 18:20:08.121 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 18:24:33.453 | INFO     | __main__:train:595 - Epoch: 178 Avg Loss: 4.607 | Constrastive: 4.607 
+2026-02-16 18:29:43.590 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5499 | Old 0.6702 | New 0.4852 | Eval_funcs: ['v1', 'v2']
+2026-02-16 18:36:37.052 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5119 | Old 0.5857 | New 0.4722 | Eval_funcs: ['v2']
+2026-02-16 18:37:35.211 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5201 | Old 0.6247 | New 0.4638 | Eval_funcs: ['v2']
+2026-02-16 18:37:35.234 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 18:37:35.235 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 18:41:59.083 | INFO     | __main__:train:595 - Epoch: 179 Avg Loss: 4.603 | Constrastive: 4.603 
+2026-02-16 18:47:13.836 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5396 | Old 0.6552 | New 0.4773 | Eval_funcs: ['v1', 'v2']
+2026-02-16 18:47:34.724 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 18:47:34.724 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 18:52:04.467 | INFO     | __main__:train:595 - Epoch: 180 Avg Loss: 4.613 | Constrastive: 4.613 
+2026-02-16 18:57:16.481 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5380 | Old 0.6536 | New 0.4759 | Eval_funcs: ['v1', 'v2']
+2026-02-16 18:57:38.519 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 18:57:38.520 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:166 Test Accuracies: All 0.5226 | Old 0.6234 | New 0.4684 | Eval_funcs: ['v2']
+2026-02-16 19:01:58.850 | INFO     | __main__:train:595 - Epoch: 181 Avg Loss: 4.606 | Constrastive: 4.606 
+2026-02-16 19:07:09.030 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5416 | Old 0.6477 | New 0.4845 | Eval_funcs: ['v1', 'v2']
+2026-02-16 19:14:01.017 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5194 | Old 0.5959 | New 0.4782 | Eval_funcs: ['v2']
+2026-02-16 19:14:59.380 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5241 | Old 0.6266 | New 0.4689 | Eval_funcs: ['v2']
+2026-02-16 19:14:59.400 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 19:14:59.400 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:182 Test Accuracies: All 0.5241 | Old 0.6266 | New 0.4689 | Eval_funcs: ['v2']
+2026-02-16 19:19:21.075 | INFO     | __main__:train:595 - Epoch: 182 Avg Loss: 4.604 | Constrastive: 4.604 
+2026-02-16 19:24:33.507 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5256 | Old 0.6520 | New 0.4575 | Eval_funcs: ['v1', 'v2']
+2026-02-16 19:24:54.857 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 19:24:54.858 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:182 Test Accuracies: All 0.5241 | Old 0.6266 | New 0.4689 | Eval_funcs: ['v2']
+2026-02-16 19:29:14.866 | INFO     | __main__:train:595 - Epoch: 183 Avg Loss: 4.616 | Constrastive: 4.616 
+2026-02-16 19:34:30.390 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5426 | Old 0.6616 | New 0.4786 | Eval_funcs: ['v1', 'v2']
+2026-02-16 19:41:24.753 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5211 | Old 0.6003 | New 0.4785 | Eval_funcs: ['v2']
+2026-02-16 19:42:23.684 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5189 | Old 0.6391 | New 0.4541 | Eval_funcs: ['v2']
+2026-02-16 19:42:23.704 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 19:42:23.705 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:182 Test Accuracies: All 0.5241 | Old 0.6266 | New 0.4689 | Eval_funcs: ['v2']
+2026-02-16 19:46:47.014 | INFO     | __main__:train:595 - Epoch: 184 Avg Loss: 4.613 | Constrastive: 4.613 
+2026-02-16 19:52:02.232 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5403 | Old 0.6636 | New 0.4739 | Eval_funcs: ['v1', 'v2']
+2026-02-16 19:52:23.796 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 19:52:23.797 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:182 Test Accuracies: All 0.5241 | Old 0.6266 | New 0.4689 | Eval_funcs: ['v2']
+2026-02-16 19:56:54.734 | INFO     | __main__:train:595 - Epoch: 185 Avg Loss: 4.609 | Constrastive: 4.609 
+2026-02-16 20:02:09.761 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5502 | Old 0.6538 | New 0.4945 | Eval_funcs: ['v1', 'v2']
+2026-02-16 20:09:09.374 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5144 | Old 0.5663 | New 0.4864 | Eval_funcs: ['v2']
+2026-02-16 20:10:09.112 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 20:10:09.135 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 20:10:09.136 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:186 Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 20:14:40.273 | INFO     | __main__:train:595 - Epoch: 186 Avg Loss: 4.612 | Constrastive: 4.612 
+2026-02-16 20:19:57.348 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5290 | Old 0.6315 | New 0.4739 | Eval_funcs: ['v1', 'v2']
+2026-02-16 20:20:19.231 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 20:20:19.231 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:186 Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 20:24:36.777 | INFO     | __main__:train:595 - Epoch: 187 Avg Loss: 4.608 | Constrastive: 4.608 
+2026-02-16 20:29:52.570 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5384 | Old 0.6587 | New 0.4736 | Eval_funcs: ['v1', 'v2']
+2026-02-16 20:30:14.405 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 20:30:14.406 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:186 Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 20:34:37.041 | INFO     | __main__:train:595 - Epoch: 188 Avg Loss: 4.607 | Constrastive: 4.607 
+2026-02-16 20:39:51.900 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5452 | Old 0.6506 | New 0.4885 | Eval_funcs: ['v1', 'v2']
+2026-02-16 20:46:50.691 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5173 | Old 0.5888 | New 0.4788 | Eval_funcs: ['v2']
+2026-02-16 20:47:50.179 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5168 | Old 0.6246 | New 0.4588 | Eval_funcs: ['v2']
+2026-02-16 20:47:50.212 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 20:47:50.212 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:186 Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 20:52:31.254 | INFO     | __main__:train:595 - Epoch: 189 Avg Loss: 4.606 | Constrastive: 4.606 
+2026-02-16 20:57:53.797 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5397 | Old 0.6623 | New 0.4737 | Eval_funcs: ['v1', 'v2']
+2026-02-16 20:58:15.760 | INFO     | __main__:train:459 - Best Report          Epoch:157 Test Accuracies: All 0.5238 | Old 0.6124 | New 0.4761 | Eval_funcs: ['v2'] 
+2026-02-16 20:58:15.761 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:186 Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 21:02:45.805 | INFO     | __main__:train:595 - Epoch: 190 Avg Loss: 4.604 | Constrastive: 4.604 
+2026-02-16 21:08:01.662 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5431 | Old 0.6636 | New 0.4783 | Eval_funcs: ['v1', 'v2']
+2026-02-16 21:15:02.170 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2']
+2026-02-16 21:16:00.732 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5241 | Old 0.6391 | New 0.4623 | Eval_funcs: ['v2']
+2026-02-16 21:16:04.659 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 21:16:04.660 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:186 Test Accuracies: All 0.5277 | Old 0.6184 | New 0.4789 | Eval_funcs: ['v2']
+2026-02-16 21:20:28.517 | INFO     | __main__:train:595 - Epoch: 191 Avg Loss: 4.602 | Constrastive: 4.602 
+2026-02-16 21:25:39.841 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5524 | Old 0.6539 | New 0.4978 | Eval_funcs: ['v1', 'v2']
+2026-02-16 21:32:43.478 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5233 | Old 0.5965 | New 0.4839 | Eval_funcs: ['v2']
+2026-02-16 21:33:42.378 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 21:33:42.401 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 21:33:42.401 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 21:38:16.001 | INFO     | __main__:train:595 - Epoch: 192 Avg Loss: 4.597 | Constrastive: 4.597 
+2026-02-16 21:43:34.316 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5423 | Old 0.6427 | New 0.4882 | Eval_funcs: ['v1', 'v2']
+2026-02-16 21:43:56.480 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 21:43:56.480 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 21:48:19.788 | INFO     | __main__:train:595 - Epoch: 193 Avg Loss: 4.601 | Constrastive: 4.601 
+2026-02-16 21:53:32.190 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5373 | Old 0.6423 | New 0.4808 | Eval_funcs: ['v1', 'v2']
+2026-02-16 21:53:54.008 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 21:53:54.008 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 21:58:24.088 | INFO     | __main__:train:595 - Epoch: 194 Avg Loss: 4.608 | Constrastive: 4.608 
+2026-02-16 22:03:40.722 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5395 | Old 0.6543 | New 0.4777 | Eval_funcs: ['v1', 'v2']
+2026-02-16 22:04:03.058 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 22:04:03.059 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 22:08:24.248 | INFO     | __main__:train:595 - Epoch: 195 Avg Loss: 4.599 | Constrastive: 4.599 
+2026-02-16 22:13:38.547 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5408 | Old 0.6471 | New 0.4836 | Eval_funcs: ['v1', 'v2']
+2026-02-16 22:20:27.278 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5214 | Old 0.5864 | New 0.4864 | Eval_funcs: ['v2']
+2026-02-16 22:21:25.622 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5218 | Old 0.6095 | New 0.4746 | Eval_funcs: ['v2']
+2026-02-16 22:21:25.642 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 22:21:25.643 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 22:25:48.172 | INFO     | __main__:train:595 - Epoch: 196 Avg Loss: 4.602 | Constrastive: 4.602 
+2026-02-16 22:30:57.781 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5385 | Old 0.6485 | New 0.4793 | Eval_funcs: ['v1', 'v2']
+2026-02-16 22:38:01.882 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5187 | Old 0.5644 | New 0.4942 | Eval_funcs: ['v2']
+2026-02-16 22:39:00.261 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5175 | Old 0.5980 | New 0.4742 | Eval_funcs: ['v2']
+2026-02-16 22:39:00.286 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 22:39:00.287 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 22:43:28.458 | INFO     | __main__:train:595 - Epoch: 197 Avg Loss: 4.610 | Constrastive: 4.610 
+2026-02-16 22:48:52.147 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5382 | Old 0.6395 | New 0.4837 | Eval_funcs: ['v1', 'v2']
+2026-02-16 22:56:06.652 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5241 | Old 0.5911 | New 0.4880 | Eval_funcs: ['v2']
+2026-02-16 22:57:06.073 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5179 | Old 0.6135 | New 0.4665 | Eval_funcs: ['v2']
+2026-02-16 22:57:06.095 | INFO     | __main__:train:459 - Best Report          Epoch:191 Test Accuracies: All 0.5243 | Old 0.6028 | New 0.4820 | Eval_funcs: ['v2'] 
+2026-02-16 22:57:06.095 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 23:01:45.302 | INFO     | __main__:train:595 - Epoch: 198 Avg Loss: 4.603 | Constrastive: 4.603 
+2026-02-16 23:07:04.828 | INFO     | __main__:extract_labeled_protos:721 - SemiSupKMeans Clu Acc: All 0.5407 | Old 0.6476 | New 0.4831 | Eval_funcs: ['v1', 'v2']
+2026-02-16 23:14:08.494 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5271 | Old 0.5800 | New 0.4986 | Eval_funcs: ['v2']
+2026-02-16 23:15:07.720 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5250 | Old 0.6109 | New 0.4787 | Eval_funcs: ['v2']
+2026-02-16 23:15:11.911 | INFO     | __main__:train:459 - Best Report          Epoch:199 Test Accuracies: All 0.5271 | Old 0.5800 | New 0.4986 | Eval_funcs: ['v2'] 
+2026-02-16 23:15:11.912 | INFO     | __main__:train:462 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
+2026-02-16 23:19:35.599 | INFO     | __main__:train:595 - Epoch: 199 Avg Loss: 4.597 | Constrastive: 4.597 
+2026-02-16 23:19:38.832 | INFO     | __main__:train:609 - ############# Final Reports #############
+2026-02-16 23:26:16.602 | INFO     | __main__:test:362 - Know-K       Test Accuracies: All 0.5225 | Old 0.5771 | New 0.4931 | Eval_funcs: ['v2']
+2026-02-16 23:27:19.671 | INFO     | __main__:test:365 - Know-K  Clu    Test Accuracies: All 0.5273 | Old 0.6220 | New 0.4763 | Eval_funcs: ['v2']
+2026-02-16 23:27:19.693 | INFO     | __main__:train:613 - Final Report         Test Accuracies: All 0.5225 | Old 0.5771 | New 0.4931
+2026-02-16 23:27:19.693 | INFO     | __main__:train:615 - Final Semisup Report Test Accuracies: All 0.5273 | Old 0.6220 | New 0.4763
+2026-02-16 23:27:19.693 | INFO     | __main__:train:638 - Best Report          Epoch:199 Test Accuracies: All 0.5271 | Old 0.5800 | New 0.4986 | Eval_funcs: ['v2']
+2026-02-16 23:27:19.693 | INFO     | __main__:train:640 - Best Semisup Report  Epoch:192 Test Accuracies: All 0.5349 | Old 0.6189 | New 0.4896 | Eval_funcs: ['v2']
