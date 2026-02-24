@@ -113,7 +113,7 @@ bash Test.sh
 We provide released weight for both KB settings:
 - **All-sample Knowledge-Base** weights (Baidu Netdisk): [link](https://pan.baidu.com/s/1AXkd5Bk-N44KXrtcLEt27g?pwd=bv77)
 - **Proto-based Knowledge-Base** weights (Baidu Netdisk): [link](https://pan.baidu.com/s/15QQIFQlIX2f_X6OgQ5avHQ?pwd=rvdf)
-
+- **All-sample Knowledge-Base and Proto-based Knowledge-Base** (Google Drive): [link](https://drive.google.com/drive/folders/1F7uXulC7R9riKMg3RDswRR8QBP-hY09b?usp=drive_link)
 
 ---
 
