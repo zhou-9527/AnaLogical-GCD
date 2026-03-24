@@ -2,7 +2,9 @@
 ### Learning Like Humans: Analogical Concept Learning for Generalized Category Discovery
 
 <p align="center">
-  <a href="<ARXIV_LINK>"><img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-red"></a>
+  <a href="https://arxiv.org/abs/2603.19918">
+    <img src="https://img.shields.io/badge/arXiv-2603.19918-red" alt="arXiv">
+  </a>
 </p>
 
 <p align="center">
@@ -342,7 +344,12 @@ Therefore, the number of KB entries equals **known classes**.
 If you use this code in your research, please consider citing our paper:
 
 ```
-Coming Soon
+@article{zhou2026analogical,
+      title={Learning Like Humans: Analogical Concept Learning for Generalized Category Discovery}, 
+      author={Jizhou Han and Chenhao Ding and Yuhang He and Qiang Wang and Shaokun Wang and SongLin Dong and Yihong Gong},
+      journal={arXiv preprint arXiv:2603.19918},
+      year={2026}
+}
 ```
 
 ## 🎁 Acknowledgements
