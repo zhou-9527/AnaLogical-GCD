@@ -813,8 +813,7 @@ def train_AL (label_list, AL_model, vis_features_labelled, text_features, args, 
     args.logger.info('Analogical Learning stage:')
 
     for epoch in range(args.epochs_AL):
-
-        random.seed(args.seed)
+        
         class_list_decoer_new = sorted(random.sample(range(0, len(vis_features_labelled)), int(args.batch_size * 1)))
         class_list_decoer_base = list(set(range(0, len(vis_features_labelled))) - set(class_list_decoer_new))
         num_class_labelled = len(class_list_decoer_new)
@@ -844,8 +843,8 @@ def train_AL (label_list, AL_model, vis_features_labelled, text_features, args, 
             text_feature_new = model(proto_list_new_f, proto_list_base_f, text_feature_base_f, args)
             cosloss = cosine_loss(text_feature_new, text_feature_new_f, loss_flag) * 10
             text_feature_new = F.normalize(text_feature_new,dim=-1)
-            text_feature_new_f = F.normalize(text_feature_new_f, dim=-1)
-            drloss = DR_Loss (text_feature_new, text_feature_new_f) * 10
+            text_feature_new_f_ = F.normalize(text_feature_new_f, dim=-1)
+            drloss = DR_Loss (text_feature_new, text_feature_new_f_) * 10
             total_loss = drloss * 0 + cosloss * 1
 
             lrc = scheduler_al.get_last_lr()[0]
@@ -859,6 +858,7 @@ def train_AL (label_list, AL_model, vis_features_labelled, text_features, args, 
 
         scheduler_al.step()
         if epoch % 100 == 0:
+            random.seed(epoch)
             args.logger.info('AL training, epo {}, num_Labeled {}, num_Unlabeled {} lrc={:.4f}, ,COS loss={:.7f}, DR loss={:.7f},total loss={:.7f}'
                                      .format(epoch, num_class_labelled, num_class_unlabelled, lrc, cosloss.item(), drloss.item() ,total_loss.item()))
 
